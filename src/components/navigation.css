@@ -1,0 +1,15 @@
+.bg-mybg{
+  background-color: #fe9126;
+}
+
+.navTitle, #navTitle{
+  color: #ffffff;
+}
+.navTitle:hover{
+  text-decoration: none;
+  color: #ffffff;
+}
+.navTitle:hover a{
+  text-decoration: none;
+  color: #ffffff;
+}
