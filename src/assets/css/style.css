@@ -112,11 +112,11 @@ i.fa.fa-angle-right {
 }
 i.fa.fa-phone {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
 button.btn.btn-default.search {
     background: #fe9126;
-    padding: 11px 12px 11px;
+    padding: 9px 12px 9px;
     float: right;
     outline: none;
     border: none;
