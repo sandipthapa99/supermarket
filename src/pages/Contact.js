@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import {FaEnvelope,FaPhoneAlt,FaHome } from "react-icons/fa";
+
 
 function Contact(){
     return(
@@ -7,7 +9,7 @@ function Contact(){
             <div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li><a href="index.html"><span aria-hidden="true"><FaHome class="glyphicon-home"/></span>Home</a></li>
 				<li class="active">Contact</li>
 			</ol>
 		</div>
@@ -24,8 +26,8 @@ function Contact(){
 						<h3>Contact Info</h3>
 						<p>1234k Avenue, 4th block, New York City.</p>
 						<ul class="wthree_contact_info_address">
-							<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-							<li><i class="fa fa-phone" aria-hidden="true"></i>+(0123) 232 232</li>
+							<li><i class="fa fa-envelope" aria-hidden="true"><FaEnvelope/></i><a href="mailto:info@example.com">info@example.com</a></li>
+							<li><i class="fa fa-phone" aria-hidden="true"><FaPhoneAlt/></i>+(0123) 232 232</li>
 						</ul>
 						<div class="w3_agile_social_icons w3_agile_social_icons_contact">
 							<ul>

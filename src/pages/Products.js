@@ -1,5 +1,16 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import {FaHome,FaArrowRight } from "react-icons/fa";
+import offer from '../assets/images/offer.png';
+import pf4 from '../assets/images/pf4.png';
+import bv3 from '../assets/images/bv3.png';
+import sixteen from '../assets/images/16.png';
+import gu5 from '../assets/images/gu5.png';
+import hh4 from '../assets/images/hh4.png';
+import pc6 from '../assets/images/pc6.png';
+import gu4 from '../assets/images/gu4.png';
+import five from '../assets/images/5.png';
+import six from '../assets/images/6.png';
 
 function Products(){
     return(
@@ -7,7 +18,7 @@ function Products(){
             <div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+			<li><Link to='/'><span aria-hidden="true"><FaHome class="glyphicon-home"/></span>Home</Link></li>
 				<li class="active">Products</li>
 			</ol>
 		</div>
@@ -20,36 +31,36 @@ function Products(){
 				<div class="categories">
 					<h2>Categories</h2>
 					<ul class="cate">
-						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Fruits And Vegetables</a></li>
+						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Fruits And Vegetables</a></li>
 							<ul>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Cuts & Sprouts</a></li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Flowers</a></li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Fresh Herbs & Seasonings</a></li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Fresh Vegetables</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>International Vegetables</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Organic Fruits & Vegetables</a></li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Cuts & Sprouts</a></li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Flowers</a></li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Fresh Herbs & Seasonings</a></li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Fresh Vegetables</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>International Vegetables</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Organic Fruits & Vegetables</a></li>
 							</ul>
-						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Grocery & Staples</a></li>
+						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Grocery & Staples</a></li>
 							<ul>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Dals & Pulses</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Dry Fruits</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Edible Oils & Ghee</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Flours & Sooji</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Masalas & Spices</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Organic Staples</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Rice & Rice Products</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Salt, Sugar & Jaggery</a></li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Dals & Pulses</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Dry Fruits</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Edible Oils & Ghee</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Flours & Sooji</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Masalas & Spices</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Organic Staples</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Rice & Rice Products</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Salt, Sugar & Jaggery</a></li>
 							</ul>
-						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>PersonalCare</a></li>
+						<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>PersonalCare</a></li>
 							<ul>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Baby Care</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Cosmetics</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Deos & Perfumes</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Skin Care</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sanitary Needs</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Oral Care</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Personal Hygiene</a> </li>
-								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Shaving Needs</a></li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Baby Care</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Cosmetics</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Deos & Perfumes</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Skin Care</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sanitary Needs</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Oral Care</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Personal Hygiene</a> </li>
+								<li><a href="products.html"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Shaving Needs</a></li>
 							</ul>
 					</ul>
 				</div>																																												
@@ -59,18 +70,18 @@ function Products(){
 					<div class="products-right-grids">
 						<div class="sorting">
 							<select id="country" onchange="change_country(this.value)" class="frm-field required sect">
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Default sorting</option>
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sort by popularity</option> 
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sort by average rating</option>					
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Sort by price</option>								
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Default sorting</option>
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by popularity</option> 
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by average rating</option>					
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by price</option>								
 							</select>
 						</div>
 						<div class="sorting-left">
 							<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Item on page 9</option>
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Item on page 18</option> 
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>Item on page 32</option>					
-								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"></i>All</option>								
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 9</option>
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 18</option> 
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 32</option>					
+								<option value="null"><i class="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All</option>								
 							</select>
 						</div>
 						<div class="clearfix"> </div>
@@ -81,13 +92,13 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="assets/images/pf4.png"/></a>		
+												<a href="single.html"><img title=" " alt=" " src={pf4}/></a>		
 												<p>Sampann-toor-dal</p>
 												<h4>$35.99 <span>$55.00</span></h4>
 											</div>
@@ -117,13 +128,13 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="assets/images/bv3.png"/></a>		
+												<a href="single.html"><img title=" " alt=" " src={bv3}/></a>		
 												<p>Parryss-sugar</p>
 												<h4>$30.99 <span>$45.00</span></h4>
 											</div>
@@ -153,16 +164,16 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img src="assets/images/16.png" alt=" " class="img-responsive"/></a>
+												<a href="single.html"><img src={sixteen} alt=" " class="img-responsive"/></a>
 												<p>Saffola-gold</p>
 												<h4>$80.99 <span>$105.00</span></h4>
 											</div>
@@ -195,13 +206,13 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="assets/images/hh4.png"/></a>		
+												<a href="single.html"><img title=" " alt=" " src={hh4}/></a>		
 												<p>Sampann-toor-dal</p>
 												<h4>$35.99 <span>$55.00</span></h4>
 											</div>
@@ -231,13 +242,13 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="assets/images/gu5.png"/></a>		
+												<a href="single.html"><img title=" " alt=" " src={gu5}/></a>		
 												<p>Parryss-sugar</p>
 												<h4>$30.99 <span>$45.00</span></h4>
 											</div>
@@ -267,16 +278,16 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img src="assets/images/pc6.png" alt=" " class="img-responsive"/></a>
+												<a href="single.html"><img src={pc6} alt=" " class="img-responsive"/></a>
 												<p>Saffola-gold</p>
 												<h4>$80.99 <span>$105.00</span></h4>
 											</div>
@@ -309,13 +320,13 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="assets/images/gu4.png"/></a>		
+												<a href="single.html"><img title=" " alt=" " src={gu4}/></a>		
 												<p>Sampann-toor-dal</p>
 												<h4>$35.99 <span>$55.00</span></h4>
 											</div>
@@ -345,13 +356,13 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src="assets/images/5.png"/></a>		
+												<a href="single.html"><img title=" " alt=" " src={five}/></a>		
 												<p>Parryss-sugar</p>
 												<h4>$30.99 <span>$45.00</span></h4>
 											</div>
@@ -381,16 +392,16 @@ function Products(){
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+									<img src={offer} alt=" " class="img-responsive"/>
 								</div>
 								<div class="agile_top_brand_left_grid1">
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img src="assets/images/6.png" alt=" " class="img-responsive"/></a>
+												<a href="single.html"><img src={six} alt=" " class="img-responsive"/></a>
 												<p>Saffola-gold</p>
 												<h4>$80.99 <span>$105.00</span></h4>
 											</div>
