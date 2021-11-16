@@ -1,33 +1,39 @@
 import React from "react";
+import offer from '../assets/images/offer.png';
+import fourteen from '../assets/images/14.png';
+import fifteen from '../assets/images/15.png';
+import sixteen from '../assets/images/16.png';
+import seventeen from '../assets/images/17.png';
+
 
 function NewOffers(){
     return(
-        <div class="newproducts-w3agile">
-		    <div class="container">
+        <div className="newproducts-w3agile">
+		    <div className="container">
 			    <h3>New offers</h3>
-                <div class="agile_top_brands_grids">
-                    <div class="col-md-3 top_brand_left-1">
-                        <div class="hover14 column">
-                            <div class="agile_top_brand_left_grid">
-                                <div class="agile_top_brand_left_grid_pos">
-                                    <img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+                <div className="agile_top_brands_grids">
+                    <div className="col-md-3 top_brand_left-1">
+                        <div className="hover14 column">
+                            <div className="agile_top_brand_left_grid">
+                                <div className="agile_top_brand_left_grid_pos">
+                                    <img src={offer} alt=" " className="img-responsive"/>
                                 </div>
-                                <div class="agile_top_brand_left_grid1">
+                                <div className="agile_top_brand_left_grid1">
                                     <figure>
-                                        <div class="snipcart-item block">
-                                            <div class="snipcart-thumb">
-                                                <a href="products.html"><img title=" " alt=" " src="assets/images/14.png"/></a>
+                                        <div className="snipcart-item block">
+                                            <div className="snipcart-thumb">
+                                                <a href="products.html"><img title=" " alt=" " src={fourteen}/></a>
                                                 <p>Fried-gram</p>
-                                                <div class="stars">
-                                                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star blue-star" aria-hidden="true"></i>
-                                                    <i class="fa fa-star gray-star" aria-hidden="true"></i>
+                                                <div className="stars">
+                                                    <i className="fa fa-star blue-star" aria-hidden="true"></i>
+                                                    <i className="fa fa-star blue-star" aria-hidden="true"></i>
+                                                    <i className="fa fa-star blue-star" aria-hidden="true"></i>
+                                                    <i className="fa fa-star blue-star" aria-hidden="true"></i>
+                                                    <i className="fa fa-star gray-star" aria-hidden="true"></i>
                                                 </div>
                                                 <h4>$35.99 <span>$55.00</span></h4>
                                             </div>
-                                            <div class="snipcart-details top_brand_home_details">
+                                            <div className="snipcart-details top_brand_home_details">
                                             <form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart"/>
@@ -39,7 +45,7 @@ function NewOffers(){
 														<input type="hidden" name="currency_code" value="USD"/>
 														<input type="hidden" name="return" value=" "/>
 														<input type="hidden" name="cancel_return" value=" "/>
-														<input type="submit" name="submit" value="Add to cart" class="button"/>
+														<input type="submit" name="submit" value="Add to cart" className="button"/>
 													</fieldset>
 												</form>
                                             </div>
@@ -49,28 +55,28 @@ function NewOffers(){
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 top_brand_left-1">
-						<div class="hover14 column">
-							<div class="agile_top_brand_left_grid">
-								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+                    <div className="col-md-3 top_brand_left-1">
+						<div className="hover14 column">
+							<div className="agile_top_brand_left_grid">
+								<div className="agile_top_brand_left_grid_pos">
+									<img src={offer} alt=" " className="img-responsive"/>
 								</div>
-								<div class="agile_top_brand_left_grid1">
+								<div className="agile_top_brand_left_grid1">
 									<figure>
-										<div class="snipcart-item block">
-											<div class="snipcart-thumb">
-												<a href="products.html"><img title=" " alt=" " src="assets/images/15.png"/></a>		
+										<div className="snipcart-item block">
+											<div className="snipcart-thumb">
+												<a href="products.html"><img title=" " alt=" " src={fifteen}/></a>		
 												<p>Navaratan-dal</p>
-												<div class="stars">
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star gray-star" aria-hidden="true"></i>
+												<div className="stars">
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star gray-star" aria-hidden="true"></i>
 												</div>
 													<h4>$30.99 <span>$45.00</span></h4>
 											</div>
-											<div class="snipcart-details top_brand_home_details">
+											<div className="snipcart-details top_brand_home_details">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart"/>
@@ -82,7 +88,7 @@ function NewOffers(){
 															<input type="hidden" name="currency_code" value="USD"/>
 															<input type="hidden" name="return" value=" "/>
 															<input type="hidden" name="cancel_return" value=" "/>
-															<input type="submit" name="submit" value="Add to cart" class="button"/>
+															<input type="submit" name="submit" value="Add to cart" className="button"/>
 													</fieldset>
 												</form>
 											</div>
@@ -92,31 +98,31 @@ function NewOffers(){
 							</div>
 						</div>
 					</div>
-                    <div class="col-md-3 top_brand_left-1">
-						<div class="hover14 column">
-							<div class="agile_top_brand_left_grid">
-								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+                    <div className="col-md-3 top_brand_left-1">
+						<div className="hover14 column">
+							<div className="agile_top_brand_left_grid">
+								<div className="agile_top_brand_left_grid_pos">
+									<img src={offer} alt=" " className="img-responsive"/>
 								</div>
-								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+								<div className="agile_top_brand_left_grid_pos">
+									<img src={offer} alt=" " className="img-responsive"/>
 								</div>
-								<div class="agile_top_brand_left_grid1">
+								<div className="agile_top_brand_left_grid1">
 									<figure>
-										<div class="snipcart-item block">
-											<div class="snipcart-thumb">
-												<a href="products.html"><img src="assets/images/16.png" alt=" " class="img-responsive"/></a>
+										<div className="snipcart-item block">
+											<div className="snipcart-thumb">
+												<a href="products.html"><img src={sixteen} alt=" " className="img-responsive"/></a>
 												<p>White-peasmatar</p>
-												<div class="stars">
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star gray-star" aria-hidden="true"></i>
+												<div className="stars">
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star gray-star" aria-hidden="true"></i>
 												</div>
 													<h4>$80.99 <span>$105.00</span></h4>
 											</div>
-											<div class="snipcart-details top_brand_home_details">
+											<div className="snipcart-details top_brand_home_details">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart"/>
@@ -128,7 +134,7 @@ function NewOffers(){
 														<input type="hidden" name="currency_code" value="USD"/>
 														<input type="hidden" name="return" value=" "/>
 														<input type="hidden" name="cancel_return" value=" "/>
-														<input type="submit" name="submit" value="Add to cart" class="button"/>
+														<input type="submit" name="submit" value="Add to cart" className="button"/>
 													</fieldset>
 												</form>
 											</div>
@@ -138,28 +144,28 @@ function NewOffers(){
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 top_brand_left-1">
-						<div class="hover14 column">
-							<div class="agile_top_brand_left_grid">
-								<div class="agile_top_brand_left_grid_pos">
-									<img src="assets/images/offer.png" alt=" " class="img-responsive"/>
+					<div className="col-md-3 top_brand_left-1">
+						<div className="hover14 column">
+							<div className="agile_top_brand_left_grid">
+								<div className="agile_top_brand_left_grid_pos">
+									<img src={offer} alt=" " className="img-responsive"/>
 								</div>
-								<div class="agile_top_brand_left_grid1">
+								<div className="agile_top_brand_left_grid1">
 									<figure>
-										<div class="snipcart-item block">
-											<div class="snipcart-thumb">
-												<a href="products.html"><img title=" " alt=" " src="assets/images/17.png"/></a>		
+										<div className="snipcart-item block">
+											<div className="snipcart-thumb">
+												<a href="products.html"><img title=" " alt=" " src={seventeen}/></a>		
 												<p>Channa-dal</p>
-												<div class="stars">
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star blue-star" aria-hidden="true"></i>
-													<i class="fa fa-star gray-star" aria-hidden="true"></i>
+												<div className="stars">
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star blue-star" aria-hidden="true"></i>
+													<i className="fa fa-star gray-star" aria-hidden="true"></i>
 												</div>
 													<h4>$35.99 <span>$55.00</span></h4>
 											</div>
-											<div class="snipcart-details top_brand_home_details">
+											<div className="snipcart-details top_brand_home_details">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart"/>
@@ -171,7 +177,7 @@ function NewOffers(){
 														<input type="hidden" name="currency_code" value="USD"/>
 														<input type="hidden" name="return" value=" "/>
 														<input type="hidden" name="cancel_return" value=" "/>
-														<input type="submit" name="submit" value="Add to cart" class="button"/>
+														<input type="submit" name="submit" value="Add to cart" className="button"/>
 													</fieldset>
 												</form>
 											</div>

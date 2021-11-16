@@ -2,110 +2,110 @@ import React from 'react';
 
 function BrandStore(){
     return(
-        <div class="brands">
-		<div class="container">
+        <div className="brands">
+		<div className="container">
 		<h3>Brand Store</h3>
-			<div class="brands-agile">
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+			<div className="brands-agile">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
 				
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="clearfix"></div>
+				<div className="clearfix"></div>
 			</div>
-			<div class="brands-agile-1">
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+			<div className="brands-agile-1">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
 				
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="clearfix"></div>
+				<div className="clearfix"></div>
 			</div>
-			<div class="brands-agile-2">
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+			<div className="brands-agile-2">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
 				
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="col-md-2 w3layouts-brand">
-					<div class="brands-w3l">
+				<div className="col-md-2 w3layouts-brand">
+					<div className="brands-w3l">
 						<p><a href="#">Lorem</a></p>
 					</div>
 				</div>
-				<div class="clearfix"></div>
+				<div className="clearfix"></div>
 			</div>
 		</div>
 	</div>	
