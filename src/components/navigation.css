@@ -1,15 +1,19 @@
+
 .bg-mybg{
   background-color: #fe9126;
 }
 
 .navTitle, #navTitle{
   color: #ffffff;
+  padding:10px 15px;
+  font-weight: 600;
+  font-size: 14px;
 }
-.navTitle:hover{
+.navTitle:hover,.navTitle:focus{
   text-decoration: none;
   color: #ffffff;
 }
-.navTitle:hover a{
-  text-decoration: none;
-  color: #ffffff;
+
+.naaav{
+  padding: 10px;
 }

@@ -6,14 +6,15 @@ import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
 
 function Navigation(){
         return(
-            <div>
-				<Navbar bg="mybg" variant="dark" sticky="top" expand="md" collapseOnSelect font="myfont">
+            <div className="bg-mybg">
+				<div className="container">
+				<Navbar variant="dark" sticky="top" expand="md" collapseOnSelect font="myfont">
 				<Navbar.Toggle/>
 				<Navbar.Collapse>
 				<Nav>
 					<Nav.Link><Link to="/" className="navTitle">Home</Link></Nav.Link>
 					<NavDropdown title={<span className="navTitle">Groceries</span>}>
-						<NavDropdown.Item><Link to="/groceries">Dals & Pulses</Link></NavDropdown.Item>
+						<NavDropdown.Item className="naaav"><Link to="/groceries">Dals & Pulses</Link></NavDropdown.Item>
 						<NavDropdown.Item><Link to="/groceries">Almonds</Link></NavDropdown.Item>
 						<NavDropdown.Item><Link to="/groceries">Cashews</Link></NavDropdown.Item>
 						<NavDropdown.Item><Link to="/groceries">Dry Fruit</Link></NavDropdown.Item>
@@ -26,13 +27,14 @@ function Navigation(){
 					<NavDropdown title={<span className="navTitle">Personal Care</span>}></NavDropdown>
 					<NavDropdown title={<span className="navTitle">Packaged Foods</span>}></NavDropdown>
 					<NavDropdown title={<span className="navTitle">Beverages</span>}></NavDropdown>
-					<Nav.Link href="/gourmet" id="navTitle"><Link to="/gourmet" className="navTitle">Gourmet</Link></Nav.Link>
-					<Nav.Link href="/offers" id="navTitle"><Link to="/offers" className="navTitle">Offers</Link></Nav.Link>
+					<Nav.Link><Link to="/gourmet" className="navTitle">Gourmet</Link></Nav.Link>
+					<Nav.Link><Link to="/offers" className="navTitle">Offers</Link></Nav.Link>
 					<Nav.Link><Link to="/contact" className="navTitle">Contact</Link></Nav.Link>
 				</Nav>
 				</Navbar.Collapse>	
 				
 				</Navbar>
+				</div>
             </div>
         );
 }
