@@ -8,12 +8,41 @@
   padding:10px 15px;
   font-weight: 600;
   font-size: 14px;
+  text-decoration: none;
 }
-.navTitle:hover,.navTitle:focus{
+.navTitle:hover,.navTitle:focus,.navTitle:active{
   text-decoration: none;
   color: #ffffff;
 }
 
 .naaav{
   padding: 10px;
+}
+.dropdownTitle{
+  color: #fe9126;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.dropdownTitle:hover,.dropdownTitle:active{
+  cursor:auto ;
+  text-decoration: none;
+}
+.dropItems{
+  color: #999;
+  font-weight: 500;
+}
+.dropItems:hover,.dropItems:focus{
+  color: #999;
+  text-decoration: none;
+}
+#droplist:hover{
+  background: none;
+  text-decoration: none;
+}
+
+#noUnderline:focus{
+text-decoration: none;
 }
