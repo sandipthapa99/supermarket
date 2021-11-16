@@ -14,7 +14,7 @@ import PackagedFoods from './pages/PackagedFoods';
 import Groceries from './pages/Groceries';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.css';
-
+import './assets/css/bootstrap.css';
 
 function App() {
   return (

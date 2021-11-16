@@ -1,31 +1,32 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
 function Navigation(){
         return(
             <div>
-                <div class="navigation-agileits">
-		<div class="container">
-			<nav class="navbar navbar-default">
+                <div className="navigation-agileits">
+		<div className="container">
+			<nav className="navbar navbar-default">
 {/* 							<!-- Brand and toggle get grouped for better mobile display --> */}
-							<div class="navbar-header nav_2">
-								<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
+							<div className="navbar-header nav_2">
+								<button type="button" className="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+									<span className="sr-only">Toggle navigation</span>
+									<span className="icon-bar"></span>
+									<span className="icon-bar"></span>
+									<span className="icon-bar"></span>
 								</button>
 							</div> 
-							<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-								<ul class="nav navbar-nav">
-									<li class="active"><Link to="/" class="act">Home</Link></li>	
+							<div className="collapse navbar-collapse" id="bs-megadropdown-tabs">
+								<ul className="nav navbar-nav">
+									<li className="active"><Link to="/" className="act">Home</Link></li>	
 {/* 									<!-- Mega Menu --> */}
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groceries<b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="multi-gd-img">
-													<ul class="multi-column-dropdown">
+									<li className="dropdown">
+										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Groceries<b className="caret"></b></a>
+										<ul className="dropdown-menu multi-column columns-3">
+											<div className="row">
+												<div className="multi-gd-img">
+													<ul className="multi-column-dropdown">
 														<h6>All Groceries</h6>
 														<li><Link to="/groceries">Dals & Pulses</Link></li>
 														<li><Link to="/groceries">Almonds</Link></li>
@@ -39,12 +40,12 @@ function Navigation(){
 											</div>
 										</ul>
 									</li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Household<b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="multi-gd-img">
-													<ul class="multi-column-dropdown">
+									<li className="dropdown">
+										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Household<b className="caret"></b></a>
+										<ul className="dropdown-menu multi-column columns-3">
+											<div className="row">
+												<div className="multi-gd-img">
+													<ul className="multi-column-dropdown">
 														<h6>All Household</h6>
 														<li><a href="household.html">Cookware</a></li>
 														<li><a href="household.html">Dust Pans</a></li>
@@ -59,12 +60,12 @@ function Navigation(){
 											</div>
 										</ul>
 									</li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal Care<b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="multi-gd-img">
-													<ul class="multi-column-dropdown">
+									<li className="dropdown">
+										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Personal Care<b className="caret"></b></a>
+										<ul className="dropdown-menu multi-column columns-3">
+											<div className="row">
+												<div className="multi-gd-img">
+													<ul className="multi-column-dropdown">
 														<h6>Baby Care</h6>
 														<li><a href="personalcare.html">Baby Soap</a></li>
 														<li><a href="personalcare.html">Baby Care Accessories</a></li>
@@ -78,12 +79,12 @@ function Navigation(){
 											</div>
 										</ul>
 									</li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Packaged Foods<b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="multi-gd-img">
-													<ul class="multi-column-dropdown">
+									<li className="dropdown">
+										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Packaged Foods<b className="caret"></b></a>
+										<ul className="dropdown-menu multi-column columns-3">
+											<div className="row">
+												<div className="multi-gd-img">
+													<ul className="multi-column-dropdown">
 														<h6>All Accessories</h6>
 														<li><Link to="/packagedfoods">Baby Food</Link></li>
 														<li><Link to="/packagedfoods">Dessert Items</Link></li>
@@ -98,12 +99,12 @@ function Navigation(){
 											</div>
 										</ul>
 									</li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="multi-gd-img">
-													<ul class="multi-column-dropdown">
+									<li className="dropdown">
+										<a href="#" className="dropdown-toggle" data-toggle="dropdown">Beverages<b className="caret"></b></a>
+										<ul className="dropdown-menu multi-column columns-3">
+											<div className="row">
+												<div className="multi-gd-img">
+													<ul className="multi-column-dropdown">
 														<h6>Tea & Coeffe</h6>
 														<li><a href="beverages.html">Green Tea</a></li>
 														<li><a href="beverages.html">Ground Coffee</a></li>
