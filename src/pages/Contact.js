@@ -1,7 +1,8 @@
 import React from "react";
 import {Helmet} from 'react-helmet';
 import {Link} from 'react-router-dom';
-import {FaEnvelope,FaPhoneAlt,FaHome } from "react-icons/fa";
+import '../components/css/contact.css'
+import {FaEnvelope,FaPhoneAlt,FaHome, FaFacebookF,FaTwitter,FaRss } from "react-icons/fa";
 
 
 function Contact(){
@@ -35,9 +36,9 @@ function Contact(){
 						</ul>
 						<div class="w3_agile_social_icons w3_agile_social_icons_contact">
 							<ul>
-								<li><a href="#" class="icon icon-cube agile_facebook"></a></li>
-								<li><a href="#" class="icon icon-cube agile_rss"></a></li>
-								<li><a href="#" class="icon icon-cube agile_t"></a></li>
+								<li><Link to="#"><FaFacebookF/></Link></li>
+								<li><Link to="#"><FaRss/></Link></li>
+								<li><Link to="#"><FaTwitter/></Link></li>
 							</ul>
 						</div>
 					</div>
@@ -48,19 +49,19 @@ function Contact(){
 
 				<form action="#" method="post">
 					<span class="input input--ichiro">
-						<input class="input__field input__field--ichiro" type="text" id="input-25" name="Name" placeholder=" " required="" />
+						<input class="input__field input__field--ichiro" type="text" id="input-25" name="Name" placeholder=" " required />
 						<label class="input__label input__label--ichiro" for="input-25">
 							<span class="input__label-content input__label-content--ichiro">Your Name</span>
 						</label>
 					</span>
 					<span class="input input--ichiro">
-						<input class="input__field input__field--ichiro" type="email" id="input-26" name="Email" placeholder=" " required="" />
+						<input class="input__field input__field--ichiro" type="email" id="input-26" name="Email" placeholder=" " required />
 						<label class="input__label input__label--ichiro" for="input-26">
 							<span class="input__label-content input__label-content--ichiro">Your Email</span>
 						</label>
 					</span>
 					<textarea name="Message" placeholder="Your message here..." required=""></textarea>
-					<input type="submit" value="Submit"/>
+					<input type="button" value="Submit"/>
 				</form>
 			</div>
 			<div class="clearfix"> </div>

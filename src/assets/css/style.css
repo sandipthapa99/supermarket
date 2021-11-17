@@ -1,12 +1,8 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
 html, body{
     font-size: 100%;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway','Open Sans', sans-serif;
 	background:#ffffff;
 }
 ul li,ol li{
@@ -77,6 +73,10 @@ input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input
 .agileits_header {
     background: #333333;
     padding: 12px 0;
+    font-family: sans-serif;
+}
+.myicon{
+    color:#777;
 }
 .w3l_offers {
     float: left;
@@ -1983,9 +1983,7 @@ a.callbacks1_s3.active,a.callbacks1_s3:focus{
 .agileits_w3layouts_map_pos ul.wthree_contact_info_address li a:hover{
 	color:#212121;
 }
-.w3_agile_social_icons_contact ul li a {
-    text-align: center;
-}
+
 .agileits_w3layouts_map_pos1{
 	padding:2em;
 	border:3px double #fff;
@@ -2141,22 +2139,7 @@ a.callbacks1_s3.active,a.callbacks1_s3:focus{
 .w3_agileits_contact_grid_right textarea::-webkit-input-placeholder {
 	color: #212121 !important;
 }
-.w3_agileits_contact_grid_right input[type="submit"] {
-    outline: none;
-    width: 100%;
-    background: #212121;
-    color: #fff;
-    padding: 0.8em 0;
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
-    text-transform: uppercase;
-    margin: 1em 0 0;
-    letter-spacing: 5px;
-}
-.w3_agileits_contact_grid_right input[type="submit"]:hover{
-	background:#3399cc;
-}
+
 /*-- //contact --*/
 /*-- social-icons --*/
 .w3_agile_social_icons ul li{

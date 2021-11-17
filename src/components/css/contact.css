@@ -1,0 +1,48 @@
+.w3_agile_social_icons_contact ul li a {
+    text-align: center;
+    padding: 0 15px;
+    color: #fff;
+}
+.w3_agile_social_icons_contact ul li:nth-child(1) {
+    background-color: #337ab7;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 5px;
+}
+.w3_agile_social_icons_contact ul li:nth-child(1):hover {
+    background-color: #1a4163;
+}
+.w3_agile_social_icons_contact ul li:nth-child(2) {
+    background-color: #e2652b;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 5px;
+}
+.w3_agile_social_icons_contact ul li:nth-child(2):hover {
+    background-color: #f26522;
+}
+.w3_agile_social_icons_contact ul li:nth-child(3) {
+    background-color: #1A8CD8;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 5px;
+}
+.w3_agile_social_icons_contact ul li:nth-child(3):hover {
+    background-color: #35465c;
+}
+.w3_agileits_contact_grid_right input[type="button"] {
+    outline: none;
+    width: 100%;
+    background: #212121;
+    color: #fff;
+    padding: 0.8em 0;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    margin: 1em 0 0;
+    letter-spacing: 5px;
+}
+.w3_agileits_contact_grid_right input[type="button"]:hover{
+	background:#3399cc;
+}

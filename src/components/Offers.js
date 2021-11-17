@@ -14,7 +14,7 @@ import nine from '../assets/images/9.png';
 import ten from '../assets/images/10.png';
 import twelve from '../assets/images/12.png';
 import thirteen from '../assets/images/13.png';
-import './offers.css';
+import './css/offers.css';
 
 import {FaStar} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';

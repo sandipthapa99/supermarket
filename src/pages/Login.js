@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
-import {FaHome } from "react-icons/fa";
+import {FaHome,FaChevronRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
 function Login(){
@@ -33,7 +33,7 @@ function Login(){
 				</form>
 			</div>
 			<h4>For New People</h4>
-			<p><Link to='/signup'>Register Here</Link> (Or) go back to <Link to='/'>Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></Link></p>
+			<p><Link to='/signup'>Register Here</Link> (Or) go back to <Link to='/'>Home <FaChevronRight size={12} className="myicon"/></Link></p>
 		</div>
 	</div>
         </div>
