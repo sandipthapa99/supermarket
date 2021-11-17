@@ -780,6 +780,9 @@ i.gray-star {
     color: #afafaf;
     font-size: 14px;
 }
+.w3_footer_grid ul.address li:nth-child(2){
+    margin-bottom: 25px;
+}
 .w3_footer_grid ul.address li i {
     color:#fe9126;
     border: 1px solid #fe9126;

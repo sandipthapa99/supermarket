@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {FaMapMarkerAlt,FaEnvelope,FaPhoneAlt,FaArrowRight } from "react-icons/fa";
 
 function Footer(){
@@ -18,30 +19,30 @@ function Footer(){
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Information</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="about.html">About Us</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="contact.html">Contact Us</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="short-codes.html">Short Codes</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="faq.html">FAQ's</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="products.html">Special Products</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/about">About Us</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/contact">Contact Us</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/shortcodes">Short Codes</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/faq">FAQ's</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/products">Special Products</Link></li>
 					</ul>
 				</div>
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Category</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="groceries.html">Groceries</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="household.html">Household</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="personalcare.html">Personal Care</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="packagedfoods.html">Packaged Foods</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="beverages.html">Beverages</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/groceries">Groceries</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/household">Household</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/personalcare">Personal Care</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/packagedfoods">Packaged Foods</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/beverages">Beverages</Link></li>
 					</ul>
 				</div>
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Profile</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="products.html">Store</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="checkout.html">My Cart</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="login.html">Login</a></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><a href="registered.html">Create Account</a></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/products">Store</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/checkout">My Cart</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/login">Login</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/signup">Create Account</Link></li>
 					</ul>
 				</div>
 				<div className="clearfix"> </div>
@@ -51,7 +52,7 @@ function Footer(){
 		<div className="footer-copy">
 			
 			<div className="container">
-				<p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				<p>© 2021 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">Ekbana</a></p>
 			</div>
 		</div>
 		
