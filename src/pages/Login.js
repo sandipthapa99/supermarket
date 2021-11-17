@@ -1,10 +1,14 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import {FaHome } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 function Login(){
     return(
         <div>
+			<Helmet>
+                <title>Supermarket | Log In</title>
+			</Helmet>
             <div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">

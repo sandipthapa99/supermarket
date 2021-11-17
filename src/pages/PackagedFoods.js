@@ -1,9 +1,13 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Helmet from "react-helmet";
 
 function PackagedFoods(){
     return(
         <div>
+			<Helmet>
+                <title>Supermarket | Packaged Foods</title>
+			</Helmet>
             <div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">

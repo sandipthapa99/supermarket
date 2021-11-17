@@ -1,4 +1,5 @@
 import React from "react";
+import {Helmet} from 'react-helmet';
 import {Link} from 'react-router-dom';
 import {FaEnvelope,FaPhoneAlt,FaHome } from "react-icons/fa";
 
@@ -6,6 +7,9 @@ import {FaEnvelope,FaPhoneAlt,FaHome } from "react-icons/fa";
 function Contact(){
     return(
         <div>
+			<Helmet>
+                <title>Supermarket | Contact</title>
+			</Helmet>
             <div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">

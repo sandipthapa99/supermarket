@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import {FaHome,FaArrowRight } from "react-icons/fa";
+import Helmet from "react-helmet";
 
 import offer from '../assets/images/offer.png';
 import one4 from '../assets/images/14.png';
@@ -12,6 +13,9 @@ import one7 from '../assets/images/17.png';
 function Groceries(){
     return(
         <div>
+			<Helmet>
+                <title>Supermarket | Groceries</title>
+			</Helmet>
             <div className="breadcrumbs">
 		<div className="container">
 			<ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
