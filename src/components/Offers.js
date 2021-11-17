@@ -27,42 +27,19 @@ function Offers(){
     return(
         <div className="top-brands">
 			<div className="container">
-			<div className="bloc-tabs">
-				{/* <button className={toggleState===1?"tabs active-tabs":"tabs" onclick={()=>toggleTab(1)}}></button> */}
-				<div className={toggleState===1?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(1)}>Advertised Offers</div>
-				<div className={toggleState===2?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(2)}>Today Offers</div>
-			</div>
-			<div className="content-tabs">
-				<div className={toggleState===1?"content active-content":"content"}>
-					<h3>Content 1</h3><hr/>
-					<p>
-						This is content 1.
-					</p>
-				</div>
-				<div className={toggleState===2?"content active-content":"content"}>
-					<h3>Content 2</h3><hr/>
-					<p>
-						This is content 2.
-					</p>
-				</div>
-			</div>
-			</div>
-			
-			<div className="container">
 			<h2>Top selling offers</h2>
 				<div className="grid_3 grid_5">
-					<div className="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-						<ul id="myTab" className="nav nav-tabs" role="tablist">
-							<li role="presentation" className="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Advertised offers</a></li>
-							<li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Today Offers</a></li>
-						</ul>
-						<div id="myTabContent" className="tab-content">
-							<div role="tabpanel" className="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
-								<div className="agile-tp">
-									<h5>Advertised this week</h5>
-									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
-								</div>
-								<div className="agile_top_brands_grids">
+				<div className="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+				<div className="bloc-tabs">
+					{/* <button className={toggleState===1?"tabs active-tabs":"tabs" onclick={()=>toggleTab(1)}}></button> */}
+					<div className={toggleState===1?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(1)}>Advertised Offers</div>
+					<div className={toggleState===2?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(2)}>Today Offers</div>
+				</div>
+				<div className="content-tabs">
+					<div className={toggleState===1?"content active-content":"content"}>
+					<h5>Advertised this week</h5>
+					<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
+					<div className="agile_top_brands_grids">
 									<div className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
@@ -329,8 +306,8 @@ function Offers(){
 									</div>
 									<div className="clearfix"> </div>
 								</div>
-							</div>
-							<div role="tabpanel" className="tab-pane fade" id="tours" aria-labelledby="tours-tab">
+					</div>
+					<div className={toggleState===2?"content active-content":"content"}>
 								<div className="agile-tp">
 									<h5>This week</h5>
 									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
@@ -601,12 +578,13 @@ function Offers(){
 										</div>
 									</div>
 									<div className="clearfix"> </div>
-								</div>
 							</div>
-						</div>
+					</div>
 					</div>
 				</div>
+				</div>
 			</div>
+
 		</div>
     );
 }
