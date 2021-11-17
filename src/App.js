@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/bootstrap.css';
 import './assets/css/style.css';
 import './assets/css/skdslider.css'
+import HouseHold from './pages/Household';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Route path='/packagedfoods' element={<PackagedFoods/>}/>
       <Route path='/groceries' element={<Groceries/>}/>
       <Route path='/products' element={<Products/>}/>
+      <Route path='/household' element={<HouseHold/>}/>
     </Routes>
     <Footer/>
     <BottomFooter/>
