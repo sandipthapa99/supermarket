@@ -5,33 +5,22 @@ import p2 from '../assets/images/p2.jpg';
 import p3 from '../assets/images/p3.jpg';
 import p4 from '../assets/images/p4.jpg';
 import oneoneone from '../assets/images/111.jpg';
+import {Carousel} from 'react-bootstrap';
 
-
-function Carousel(){
+function Carousels(){
     return(
         <div>
-        <div id="myCarousel" className="carousel slide" data-ride="carousel">
-{/*       <!-- Indicators --> */}
-      <ol className="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div className="carousel-inner" role="listbox">
-        <div className="item active">
-         <a href="beverages.html"> <img className="first-slide" src={b1} alt="First slide"/></a>
-       
-        </div>
-        <div className="item">
-         <a href="personalcare.html"> <img className="second-slide " src={b3} alt="Second slide"/></a>
-         
-        </div>
-        <div className="item">
-          <a href="household.html"><img className="third-slide " src={b1} alt="Third slide"/></a>
-          
-        </div>
-      </div>
-    </div>
+			<Carousel controls={false} indicators={true} interval={3000}>
+				<Carousel.Item>
+					<img src={b1} alt="slide 1" width="100%"/>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img src={b3} alt="slide 1" width="100%"/>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img src={b1} alt="slide 1" width="100%"/>
+				</Carousel.Item>
+			</Carousel>
 
     <div className="ban-bottom-w3l">
 					<div className="container">
@@ -71,4 +60,4 @@ function Carousel(){
     );
 }
 
-export default Carousel;
+export default Carousels;

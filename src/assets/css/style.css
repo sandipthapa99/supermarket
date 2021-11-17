@@ -733,17 +733,16 @@ i.gray-star {
 .carousel-indicators {
     position: absolute;
     bottom: -45px;
-    left: 48%;
+    left: 0%;
     z-index: 15;
 	width: auto;
-    padding-left: 0;
-    margin: 0;
+    padding: 0;
+    margin: 0 auto;
     text-align: center;
     list-style: none;
 }
 
-
-.carousel-indicators li {
+.carousel-indicators button:nth-child(1),.carousel-indicators button:nth-child(2),.carousel-indicators button:nth-child(3) {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -752,7 +751,7 @@ i.gray-star {
     cursor: pointer;
     background-color: #029241;
     border: none;
-    border-radius: 10px;
+    border-radius: 100%;
 }
 .carousel-indicators .active {
     background-color: #FAB005;

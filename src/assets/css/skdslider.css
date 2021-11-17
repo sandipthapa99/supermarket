@@ -147,12 +147,12 @@ text-decoration:underline;
 		bottom: 42%;
 	}
 	.skdslider {
-		height: 556px;
+		height: 536px;
 	}
 }
 @media (max-width: 1366px){
 	.skdslider {
-		height: 527px;
+		height: 511px;
 	}	
 	.skdslider .slide-desc > h3 {
 		font-size: 36px;
@@ -166,7 +166,7 @@ text-decoration:underline;
 }
 @media (max-width: 1280px){
 	.skdslider {
-		height: 493px;
+		height: 434px;
 	}	
 	.skdslider .slide-desc > p {
 		font-size: 14px;
@@ -177,7 +177,7 @@ text-decoration:underline;
 }
 @media (max-width: 1080px){
 	.skdslider {
-		height: 550px;
+		height: 414px;
 	}
 	.skdslider .slide-desc > p {
 		font-size: 13px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import BrandStore from '../components/BrandStore';
-import Carousel from '../components/Carousel';
+import Carousels from '../components/Carousels';
 import NewOffers from '../components/NewOffers';
 import Offers from '../components/Offers';
 import Slider from '../components/Slider';
@@ -14,7 +14,7 @@ function Home(){
 			</Helmet>
             <Slider/>
             <Offers/>
-            <Carousel/>
+            <Carousels/>
             <BrandStore/>
             <NewOffers/>
         </div>

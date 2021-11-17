@@ -8,7 +8,7 @@ import {Carousel} from 'react-bootstrap';
 function Slider(){
     return(
 		<div className="skdslider">
-			<Carousel style={{position:'relative'}} fade={true} prevIcon={<span aria-hidden="true"></span>} nextIcon={<span aria-hidden="true"></span>}>
+			<Carousel fade={true} controls={false} interval={3000} indicators={false}>
 				<Carousel.Item>
 					<img src={img1} alt="" width="100%"/>
 					<div className="slide-desc">
