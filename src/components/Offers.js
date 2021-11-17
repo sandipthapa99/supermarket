@@ -16,6 +16,9 @@ import twelve from '../assets/images/12.png';
 import thirteen from '../assets/images/13.png';
 import './offers.css';
 
+import {FaStar} from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
+
 
 function Offers(){
 
@@ -55,11 +58,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={one} /></a>		
 																<p>Tata-salt</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$20.99 <span>$35.00</span></h4>
 															</div>
@@ -98,11 +105,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={two} /></a>		
 																<p>Fortune-sunflower</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$20.99 <span>$35.00</span></h4>
 															</div>
@@ -142,11 +153,15 @@ function Offers(){
 																<a href="products.html"><img src={three} alt=" " className="img-responsive" /></a>
 																<p>Aashirvaad-atta</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$40.99 <span>$65.00</span></h4>
 															</div>
@@ -188,11 +203,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={four} /></a>		
 																<p>Sampann-toor-dal</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$35.99 <span>$55.00</span></h4>
 															</div>
@@ -231,11 +250,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={five} /></a>		
 																<p>Parryss-sugar</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$30.99 <span>$45.00</span></h4>
 															</div>
@@ -277,11 +300,15 @@ function Offers(){
 																<a href="products.html"><img src={six} alt=" " className="img-responsive" /></a>
 																<p>Saffola-gold</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$80.99 <span>$105.00</span></h4>
 															</div>
@@ -330,11 +357,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={seven} /></a>		
 																<p>Sona-masoori-rice</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$35.99 <span>$55.00</span></h4>
 															</div>
@@ -373,11 +404,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={eight} /></a>		
 																<p>Milky-mist-paneer</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$30.99 <span>$45.00</span></h4>
 															</div>
@@ -419,11 +454,15 @@ function Offers(){
 																<a href="products.html"><img src={nine} alt=" " className="img-responsive" /></a>
 																<p>Basmati-Rice</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$80.99 <span>$105.00</span></h4>
 															</div>
@@ -465,11 +504,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={ten} /></a>		
 																<p>Fortune-sunflower</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$20.99 <span>$35.00</span></h4>
 															</div>
@@ -508,11 +551,15 @@ function Offers(){
 																<a href="products.html"><img title=" " alt=" " src={twelve} /></a>		
 																<p>Nestle-a-slim</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$20.99 <span>$35.00</span></h4>
 															</div>
@@ -551,11 +598,15 @@ function Offers(){
 																<a href="products.html"><img src={thirteen} alt=" " className="img-responsive" /></a>
 																<p>Bread-sandwich</p>
 																<div className="stars">
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star blue-star" aria-hidden="true"></i>
-																	<i className="fa fa-star gray-star" aria-hidden="true"></i>
+																	<IconContext.Provider value={{color:'#3399cc'}}>
+																	<FaStar className="mybg" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
+																	<IconContext.Provider value={{color:'#808080'}}>
+																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
+																	</IconContext.Provider>
 																</div>
 																<h4>$40.99 <span>$65.00</span></h4>
 															</div>
