@@ -26,14 +26,12 @@ function Offers(){
 	}
     return(
         <div className="top-brands">
-
 			<div className="container">
 			<div className="bloc-tabs">
 				{/* <button className={toggleState===1?"tabs active-tabs":"tabs" onclick={()=>toggleTab(1)}}></button> */}
-				<div className={toggleState===1?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(1)}>Tab 1</div>
-				<div className={toggleState===2?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(2)}>Tab 2</div>
+				<div className={toggleState===1?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(1)}>Advertised Offers</div>
+				<div className={toggleState===2?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(2)}>Today Offers</div>
 			</div>
-
 			<div className="content-tabs">
 				<div className={toggleState===1?"content active-content":"content"}>
 					<h3>Content 1</h3><hr/>
@@ -49,7 +47,7 @@ function Offers(){
 				</div>
 			</div>
 			</div>
-
+			
 			<div className="container">
 			<h2>Top selling offers</h2>
 				<div className="grid_3 grid_5">
