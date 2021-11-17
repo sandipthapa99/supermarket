@@ -27,19 +27,21 @@ function Offers(){
     return(
         <div className="top-brands">
 			<div className="container">
-			<h2>Top selling offers</h2>
+				<h2>Top selling offers</h2>
 				<div className="grid_3 grid_5">
-				<div className="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-				<div className="bloc-tabs">
-					{/* <button className={toggleState===1?"tabs active-tabs":"tabs" onclick={()=>toggleTab(1)}}></button> */}
-					<div className={toggleState===1?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(1)}>Advertised Offers</div>
-					<div className={toggleState===2?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(2)}>Today Offers</div>
-				</div>
-				<div className="content-tabs">
-					<div className={toggleState===1?"content active-content":"content"}>
-					<h5>Advertised this week</h5>
-					<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
-					<div className="agile_top_brands_grids">
+					<div className="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+						<div className="bloc-tabs">
+							{/* <button className={toggleState===1?"tabs active-tabs":"tabs" onclick={()=>toggleTab(1)}}></button> */}
+							<div className={toggleState===1?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(1)}>Advertised Offers</div>
+							<div className={toggleState===2?"tabs active-tabs":"tabs"} onClick={()=>toggleTab(2)}>Today Offers</div>
+						</div>
+						<div className="content-tabs">
+							<div className={toggleState===1?"content active-content":"content"}>
+								<div className="agile-tp">
+									<h5>Advertised this week</h5>
+									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
+								</div>
+								<div className="agile_top_brands_grids">
 									<div className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
@@ -126,6 +128,7 @@ function Offers(){
 											</div>
 										</div>
 									</div>
+
 									<div className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
@@ -306,8 +309,9 @@ function Offers(){
 									</div>
 									<div className="clearfix"> </div>
 								</div>
-					</div>
-					<div className={toggleState===2?"content active-content":"content"}>
+							</div>
+
+							<div className={toggleState===2?"content active-content":"content"}>
 								<div className="agile-tp">
 									<h5>This week</h5>
 									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
@@ -578,13 +582,12 @@ function Offers(){
 										</div>
 									</div>
 									<div className="clearfix"> </div>
+								</div>
 							</div>
+						</div>
 					</div>
-					</div>
-				</div>
 				</div>
 			</div>
-
 		</div>
     );
 }
