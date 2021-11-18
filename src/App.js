@@ -19,6 +19,7 @@ import './assets/css/skdslider.css'
 import HouseHold from './pages/Household';
 import PersonalCare from './pages/PersonalCare';
 import Beverages from './pages/Beverages';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <Route path='/household' element={<HouseHold/>}/>
       <Route path='/personalcare' element={<PersonalCare/>}/>
       <Route path='/beverages' element={<Beverages/>}/>
+      <Route path='/cart' element={<Cart/>}/>
     </Routes>
     <Footer/>
     <BottomFooter/>

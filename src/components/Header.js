@@ -22,7 +22,7 @@ function Header(){
                             <form action="#" method="post" className="last"> 
                                 <input type="hidden" name="cmd" value="_cart"/>
                                 <input type="hidden" name="display" value="1"/>
-                                <button className="w3view-cart" type="submit" name="submit" value=""><i className="fa fa-cart-arrow-down" aria-hidden="true"><FaCartArrowDown/></i></button>
+                                <Link to="/cart"><button className="w3view-cart"><i className="fa fa-cart-arrow-down" aria-hidden="true"><FaCartArrowDown/></i></button></Link>
                             </form>  
                     </div>
                     <div className="clearfix"> </div>

@@ -2,25 +2,17 @@ import React from 'react';
 import {useState} from 'react';
 
 import img1 from '../assets/images/offer.png';
-import one from '../assets/images/1.png';
-import two from '../assets/images/2.png';
-import three from '../assets/images/3.png';
-import four from '../assets/images/4.png';
-import five from '../assets/images/5.png';
-import six from '../assets/images/6.png';
-import seven from '../assets/images/7.png';
-import eight from '../assets/images/8.png';
-import nine from '../assets/images/9.png';
-import ten from '../assets/images/10.png';
-import twelve from '../assets/images/12.png';
-import thirteen from '../assets/images/13.png';
+
 import './css/offers.css';
+import Data from './data/Data';
 
 import {FaStar} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
 
 function Offers(){
+
+	const {advertised1,advertised2,today1,today2} = Data;
 
 	const [toggleState, setToggleState] = useState(1);
 
@@ -45,7 +37,8 @@ function Offers(){
 									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
 								</div>
 								<div className="agile_top_brands_grids">
-									<div className="col-md-4 top_brand_left">
+									{advertised1.map((b)=>(
+										<div key={b.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
 												<div className="agile_top_brand_left_grid_pos">
@@ -55,8 +48,8 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={one} /></a>		
-																<p>Tata-salt</p>
+																<a href="products.html"><img src={b.image} title="" alt=" "  /></a>		
+																<p>{b.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
 																	<FaStar className="mybg" aria-hidden="true"></FaStar>
@@ -68,7 +61,7 @@ function Offers(){
 																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
 																	</IconContext.Provider>
 																</div>
-																<h4>$20.99 <span>$35.00</span></h4>
+																<h4>${b.price} <span>$35.00</span></h4>
 															</div>
 															<div className="snipcart-details top_brand_home_details">
 																<form action="#" method="post">
@@ -82,7 +75,7 @@ function Offers(){
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
 																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
+																		<input type="button" name="submit" value="Add to cart" className="button"/>
 																	</fieldset>
 																</form>
 															</div>
@@ -92,105 +85,12 @@ function Offers(){
 											</div>
 										</div>
 									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block" >
-															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={two} /></a>		
-																<p>Fortune-sunflower</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$20.99 <span>$35.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="basmati rise" />
-																		<input type="hidden" name="amount" value="20.99" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block">
-															<div className="snipcart-thumb">
-																<a href="products.html"><img src={three} alt=" " className="img-responsive" /></a>
-																<p>Aashirvaad-atta</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$40.99 <span>$65.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="Pepsi soft drink" />
-																		<input type="hidden" name="amount" value="40.00" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}									
 									<div className="clearfix"> </div>
 								</div>
 								<div className="agile_top_brands_grids">
-									<div className="col-md-4 top_brand_left">
+									{advertised2.map((a)=>(
+										<div key={a.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
 												<div className="agile_top_brand_left_grid_pos">
@@ -200,8 +100,8 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={four} /></a>		
-																<p>Sampann-toor-dal</p>
+																<a href="products.html"><img src={a.image} title="" alt=" "  /></a>		
+																<p>{a.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
 																	<FaStar className="mybg" aria-hidden="true"></FaStar>
@@ -213,7 +113,7 @@ function Offers(){
 																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
 																	</IconContext.Provider>
 																</div>
-																<h4>$35.99 <span>$55.00</span></h4>
+																<h4>${a.price} <span>$35.00</span></h4>
 															</div>
 															<div className="snipcart-details top_brand_home_details">
 																<form action="#" method="post">
@@ -222,7 +122,7 @@ function Offers(){
 																		<input type="hidden" name="add" value="1" />
 																		<input type="hidden" name="business" value=" " />
 																		<input type="hidden" name="item_name" value="Fortune Sunflower Oil" />
-																		<input type="hidden" name="amount" value="35.99" />
+																		<input type="hidden" name="amount" value="20.99" />
 																		<input type="hidden" name="discount_amount" value="1.00" />
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
@@ -237,105 +137,9 @@ function Offers(){
 											</div>
 										</div>
 									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block" >
-															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={five} /></a>		
-																<p>Parryss-sugar</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$30.99 <span>$45.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="basmati rise" />
-																		<input type="hidden" name="amount" value="30.99" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block">
-															<div className="snipcart-thumb">
-																<a href="products.html"><img src={six} alt=" " className="img-responsive" /></a>
-																<p>Saffola-gold</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$80.99 <span>$105.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="Pepsi soft drink" />
-																		<input type="hidden" name="amount" value="80.00" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}									
 									<div className="clearfix"> </div>
-								</div>
+								</div>								
 							</div>
 
 							<div className={toggleState===2?"content active-content":"content"}>
@@ -344,7 +148,8 @@ function Offers(){
 									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
 								</div>
 								<div className="agile_top_brands_grids">
-									<div className="col-md-4 top_brand_left">
+									{today1.map((items)=>(
+										<div key={items.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
 												<div className="agile_top_brand_left_grid_pos">
@@ -354,8 +159,8 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={seven} /></a>		
-																<p>Sona-masoori-rice</p>
+																<a href="products.html"><img title=" " alt=" " src={items.image} /></a>		
+																<p>{items.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
 																	<FaStar className="mybg" aria-hidden="true"></FaStar>
@@ -367,7 +172,7 @@ function Offers(){
 																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
 																	</IconContext.Provider>
 																</div>
-																<h4>$35.99 <span>$55.00</span></h4>
+																<h4>${items.price} <span>$55.00</span></h4>
 															</div>
 															<div className="snipcart-details top_brand_home_details">
 																<form action="#" method="post">
@@ -391,107 +196,12 @@ function Offers(){
 											</div>
 										</div>
 									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block" >
-															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={eight} /></a>		
-																<p>Milky-mist-paneer</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$30.99 <span>$45.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="basmati rise" />
-																		<input type="hidden" name="amount" value="30.99" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block">
-															<div className="snipcart-thumb">
-																<a href="products.html"><img src={nine} alt=" " className="img-responsive" /></a>
-																<p>Basmati-Rice</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$80.99 <span>$105.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="Pepsi soft drink" />
-																		<input type="hidden" name="amount" value="80.00" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="clearfix"> </div>
+									))}
+								<div className="clearfix"> </div>
 								</div>
 								<div className="agile_top_brands_grids">
-									<div className="col-md-4 top_brand_left">
+									{today2.map((items)=>(
+										<div key={items.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
 												<div className="agile_top_brand_left_grid_pos">
@@ -501,8 +211,8 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={ten} /></a>		
-																<p>Fortune-sunflower</p>
+																<a href="products.html"><img title=" " alt=" " src={items.image} /></a>		
+																<p>{items.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
 																	<FaStar className="mybg" aria-hidden="true"></FaStar>
@@ -514,7 +224,7 @@ function Offers(){
 																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
 																	</IconContext.Provider>
 																</div>
-																<h4>$20.99 <span>$35.00</span></h4>
+																<h4>${items.price} <span>$35.00</span></h4>
 															</div>
 															<div className="snipcart-details top_brand_home_details">
 																<form action="#" method="post">
@@ -538,100 +248,8 @@ function Offers(){
 											</div>
 										</div>
 									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block" >
-															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={twelve} /></a>		
-																<p>Nestle-a-slim</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$20.99 <span>$35.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="basmati rise" />
-																		<input type="hidden" name="amount" value="20.99" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="col-md-4 top_brand_left">
-										<div className="hover14 column">
-											<div className="agile_top_brand_left_grid">
-												<div className="agile_top_brand_left_grid_pos">
-													<img src={img1} alt=" " className="img-responsive" />
-												</div>
-												<div className="agile_top_brand_left_grid1">
-													<figure>
-														<div className="snipcart-item block">
-															<div className="snipcart-thumb">
-																<a href="products.html"><img src={thirteen} alt=" " className="img-responsive" /></a>
-																<p>Bread-sandwich</p>
-																<div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div>
-																<h4>$40.99 <span>$65.00</span></h4>
-															</div>
-															<div className="snipcart-details top_brand_home_details">
-																<form action="#" method="post">
-																	<fieldset>
-																		<input type="hidden" name="cmd" value="_cart" />
-																		<input type="hidden" name="add" value="1" />
-																		<input type="hidden" name="business" value=" " />
-																		<input type="hidden" name="item_name" value="Pepsi soft drink" />
-																		<input type="hidden" name="amount" value="40.00" />
-																		<input type="hidden" name="discount_amount" value="1.00" />
-																		<input type="hidden" name="currency_code" value="USD" />
-																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
-																	</fieldset>
-																</form>
-															</div>
-														</div>
-													</figure>
-												</div>
-											</div>
-										</div>
-									</div>
+									))}
+									
 									<div className="clearfix"> </div>
 								</div>
 							</div>
