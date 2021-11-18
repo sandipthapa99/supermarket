@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { FaCartArrowDown,FaSearch,FaPhoneAlt } from "react-icons/fa";
+import { Badge, Container,FOrmControl,Nav,Navbar,Dropdown } from 'react-bootstrap';
 
 function Header(){
         return(
@@ -22,7 +23,20 @@ function Header(){
                             <form action="#" method="post" className="last"> 
                                 <input type="hidden" name="cmd" value="_cart"/>
                                 <input type="hidden" name="display" value="1"/>
-                                <Link to="/cart"><button className="w3view-cart"><i className="fa fa-cart-arrow-down" aria-hidden="true"><FaCartArrowDown/></i></button></Link>
+                                {/* <Link to="/cart"><button className="w3view-cart"><i className="fa fa-cart-arrow-down" aria-hidden="true"><FaCartArrowDown/></i></button></Link> */}
+                                <Navbar>
+                                        <Nav>
+                                            <Dropdown alignRight>
+                                                <Dropdown.Toggle variant="success">
+                                                    <FaCartArrowDown fontSize="20px"/>
+                                                    <Badge pill bg="danger" text="light" style={{fontSize:"10px",top:-9,left:-5}}>{10}</Badge>
+                                                </Dropdown.Toggle>
+                                                <Dropdown.Menu alignLeft style={{minWidth:370,left:"-280px"}}>
+                                                    <span style={{padding:10,color:"#000000"}}>Cart is Empty</span>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
+                                        </Nav>
+                                </Navbar>
                             </form>  
                     </div>
                     <div className="clearfix"> </div>
