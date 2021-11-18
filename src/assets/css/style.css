@@ -1619,7 +1619,11 @@ h3.w3_agile_header:after,h2.w3_agile_header:after{
 .testi-slider {
     padding: 4em 2em 3em;
     background: #3399cc;
-    margin-top: 2em;
+    /* margin-top: 2em; */
+    font-family: sans-serif;
+}
+.testi-slider p{
+    font-size: 12px;
 }
 /*-- slider start here --*/
 #slider3,#slider4 {
@@ -1670,6 +1674,7 @@ h3.w3_agile_header:after,h2.w3_agile_header:after{
 .callbacks_container {
 	float: left;
 	width: 100%;
+    padding:0 2em 3em;
 }
 .callbacks {
 	position: relative;
