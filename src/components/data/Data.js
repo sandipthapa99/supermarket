@@ -55,19 +55,19 @@ const data = {
     ],
     today1:[
         {
-            id:"1",
+            id:"7",
             name:"Sona-Masoori-Rice",
             price: "35.99",
             image:seven
         },
         {
-            id:"2",
+            id:"8",
             name:"Milky-Mist-Paneer",
             price: "30.99",
             image:eight
         },
         {
-            id:"3",
+            id:"9",
             name:"Basmati-Rice",
             price: "80.99",
             image:nine
@@ -75,19 +75,19 @@ const data = {
     ],
     today2:[
         {
-            id:"4",
+            id:"10",
             name:"Fortune-Sunflower",
             price: "20.99",
             image:ten
         },
         {
-            id:"5",
+            id:"11",
             name:"Nestle-A-Slim",
             price: "20.99",
             image:twelve
         },
         {
-            id:"6",
+            id:"12",
             name:"Bread-Sandwich",
             price: "40.99",
             image:thirteen

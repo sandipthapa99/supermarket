@@ -4,7 +4,6 @@ import {useState} from 'react';
 import img1 from '../assets/images/offer.png';
 
 import './css/offers.css';
-import Data from './data/Data';
 
 import {FaStar} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
@@ -13,7 +12,9 @@ import {CartState} from "../context/Context";
 
 function Offers(){
 	const {state:{a1,a2,t1,t2},} = CartState();
-	console.log(a2);
+
+	const {state:{cart},dispatch} = CartState();
+	console.log(cart);
 
 	// const {advertised1,advertised2,today1,today2} = Data;
 
@@ -78,7 +79,24 @@ function Offers(){
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
 																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="button" name="submit" value="Add to cart" className="button"/>
+																		{cart.some(p=>p.id===b.id)?(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'REMOVE_FROM_CART',
+																				payload:b,
+																			});
+																			}}  name="submit" value="Remove from Cart" className="buttonRemove"/>
+																		):(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'ADD_TO_CART',
+																				payload:b,
+																			});
+																			}} 
+																			name="submit" value="Add to cart" className="button"/>
+																		)}
+																		
+																		
 																	</fieldset>
 																</form>
 															</div>
@@ -130,7 +148,13 @@ function Offers(){
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
 																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="submit" name="submit" value="Add to cart" className="button" />
+																		{/* {cart.some(p=>p.id===a.id)?(
+																			<input type="button" name="submit" value="Remove from Cart" className="buttonRemove"/>
+																		):(
+																			<input type="button" name="submit" value="Add to cart" className="button"/>
+																		)} */}
+																		<input type="button" name="submit" value="Add to cart" className="button"/>
+																		<input type="button" name="submit" value="Remove from Cart" className="buttonRemove"/>
 																	</fieldset>
 																</form>
 															</div>

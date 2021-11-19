@@ -411,8 +411,25 @@ ul.multi-column-dropdown h6 {
     padding: .5em 0;
     outline: none;
 }
-.agile_top_brand_left_grid:hover .snipcart-details input.button,.snipcart-details input.button:hover{
+.snipcart-details input.button:hover {
+    background: #1fbe4f;
+}
+.snipcart-details input.buttonRemove:hover {
+    background: #e63c09;
+}
+.snipcart-details input.buttonRemove {
+    font-size: 14px;
+    color: #fff;
     background: #fe9126;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    text-transform: uppercase;
+    padding: .5em 0;
+    margin: 5px auto;
+    outline: none;
 }
 .product_list_header input.button {
     color: #fff;
