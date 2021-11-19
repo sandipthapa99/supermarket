@@ -65,8 +65,8 @@ function Cart(){
                     
                 </ListGroup>
                 <div className="filters summary">
-                    <span className="title">Subtotal ({cart.length}) items</span>
-                    <span style={{fontWeight:700, fontSize:20}}>Total: $ {Number(total).toFixed(2)}</span>
+                    <span className="title">Total unique products: {cart.length}</span>
+                    <span style={{fontWeight:700, fontSize:20}}>Total Price: $ {Number(total).toFixed(2)}</span>
                     <Button type="button" disabled={cart.length===0}>Proceed to CheckOut</Button>
                 </div>
             {/* </div> */}
