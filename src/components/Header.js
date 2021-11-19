@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown, FaSearch, FaPhoneAlt } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
 import {
   Badge,
   Container,
@@ -9,8 +10,13 @@ import {
   Navbar,
   Dropdown,
 } from "react-bootstrap";
+import { CartState } from "../context/Context";
+import './css/header.css'
 
 function Header() {
+
+  const {state: {cart},dispatch} = CartState();
+
   return (
     <div>
       <div className="agileits_header">
@@ -50,16 +56,39 @@ function Header() {
                         text="light"
                         style={{ fontSize: "10px", top: -9, left: -5 }}
                       >
-                        {10}
+                        {cart.length}
                       </Badge>
                     </Dropdown.Toggle>
                     <Dropdown.Menu
                       alignLeft
                       style={{ minWidth: 370, left: "-280px" }}
                     >
-                      <span style={{ padding: 10, color: "#000000" }}>
-                        Cart is Empty
+                    {cart.length>0?(
+                      <>
+                        {cart.map(prod=>(
+                          <span className="cartitem" key={prod.id}>
+                            <img src={prod.image} className="cartItemImg" alt={prod.name}/>
+                            <div className="cartItemDetail">
+                              <span id="itemText">{prod.name}</span>
+                              <span id="itemText">${prod.price}</span>
+                            </div>
+                            <AiFillDelete
+                            fontSize="20px" 
+                            style={{cursor:"pointer",color:"#dc3545"}}
+                            onClick={()=>dispatch({
+                              type:"REMOVE_FROM_CART",
+                              payload:prod,
+                            })}
+                             ></AiFillDelete>
+                          </span>
+                        ))}
+                      </>
+                    ):(
+                      <span id="emptyCart">
+                        There are no items in the Cart!
                       </span>
+                    )}
+                      
                     </Dropdown.Menu>
                   </Dropdown>
                 </Nav>

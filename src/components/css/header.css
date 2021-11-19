@@ -1,0 +1,35 @@
+.cartitem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    margin-bottom: 20px;
+}
+
+.cartItemImg{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.cartItemDetail{
+    display: flex;
+    flex: 1;
+    padding: 0 20px;
+    flex-direction: column;
+    color: #000;
+
+}
+
+#itemText{
+    color: #555;
+    font-weight: 600;
+
+}
+#emptyCart{
+    padding: 10px 15px;
+    color: #555;
+    font-weight: 600;
+    float: right;
+    text-transform: capitalize;
+}
