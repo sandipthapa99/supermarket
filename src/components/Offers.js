@@ -8,11 +8,14 @@ import Data from './data/Data';
 
 import {FaStar} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import {CartState} from "../context/Context";
 
 
 function Offers(){
+	const {state:{a1,a2,t1,t2},} = CartState();
+	console.log(a2);
 
-	const {advertised1,advertised2,today1,today2} = Data;
+	// const {advertised1,advertised2,today1,today2} = Data;
 
 	const [toggleState, setToggleState] = useState(1);
 
@@ -37,7 +40,7 @@ function Offers(){
 									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
 								</div>
 								<div className="agile_top_brands_grids">
-									{advertised1.map((b)=>(
+									{a1.map((b)=>(
 										<div key={b.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
@@ -89,7 +92,7 @@ function Offers(){
 									<div className="clearfix"> </div>
 								</div>
 								<div className="agile_top_brands_grids">
-									{advertised2.map((a)=>(
+									{a2.map((a)=>(
 										<div key={a.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
@@ -148,7 +151,7 @@ function Offers(){
 									<p className="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
 								</div>
 								<div className="agile_top_brands_grids">
-									{today1.map((items)=>(
+									{t1.map((items)=>(
 										<div key={items.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
@@ -200,7 +203,7 @@ function Offers(){
 								<div className="clearfix"> </div>
 								</div>
 								<div className="agile_top_brands_grids">
-									{today2.map((items)=>(
+									{t2.map((items)=>(
 										<div key={items.id} className="col-md-4 top_brand_left">
 										<div className="hover14 column">
 											<div className="agile_top_brand_left_grid">
