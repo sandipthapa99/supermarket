@@ -9,6 +9,7 @@ import {
   Nav,
   Navbar,
   Dropdown,
+  Button
 } from "react-bootstrap";
 import { CartState } from "../context/Context";
 import './css/header.css'
@@ -60,8 +61,7 @@ function Header() {
                       </Badge>
                     </Dropdown.Toggle>
                     <Dropdown.Menu
-                      alignLeft
-                      style={{ minWidth: 370, left: "-280px" }}
+                      style={{ minWidth: 370, left: "-280px", zIndex:9999 }}
                     >
                     {cart.length>0?(
                       <>
@@ -82,6 +82,9 @@ function Header() {
                              ></AiFillDelete>
                           </span>
                         ))}
+                        <Link to="/cart">
+                          <Button style={{width:"95%", margin:"0 10px 15px 10px"}}>Go To Cart</Button>
+                        </Link>
                       </>
                     ):(
                       <span id="emptyCart">

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+.add, .minus{
+    margin:0 10px ;
+    color: #555;
+}
+.filters {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .filters > span {
+    padding-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 30px;
+  }
+  
+  .productContainer {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .list-group{
+      width: 60%;
+      margin:10px 20px;
+  }
+  .cartItemImg{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+  .col-md-2{
+      margin: auto;
+      text-align: left;
+      font-size: 20px;
+      font-family: sans-serif; 
+      letter-spacing: 2px;
+      color: #333;
+  }
+  .col-md-2:nth-child(1){
+      width: 20%;
+  }
+  .col-md-2:nth-child(2){
+      width: 30%;
+  }
+  .col-md-2:nth-child(3){
+      width: 10%;
+  }
+  .col-md-2:nth-child(4){
+      width: 10%;
+  }
+  .home {
+    display: flex;
+  }
+  .summary{
+    width: 30%;
+    height: fit-content;
+  }
+  .filters button{
+    margin-top: 40px;
+  }

@@ -148,13 +148,22 @@ function Offers(){
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
 																		<input type="hidden" name="cancel_return" value=" " />
-																		{/* {cart.some(p=>p.id===a.id)?(
-																			<input type="button" name="submit" value="Remove from Cart" className="buttonRemove"/>
+																		{cart.some(p=>p.id===a.id)?(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'REMOVE_FROM_CART',
+																				payload:a,
+																			});
+																			}}  name="submit" value="Remove from Cart" className="buttonRemove"/>
 																		):(
-																			<input type="button" name="submit" value="Add to cart" className="button"/>
-																		)} */}
-																		<input type="button" name="submit" value="Add to cart" className="button"/>
-																		<input type="button" name="submit" value="Remove from Cart" className="buttonRemove"/>
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'ADD_TO_CART',
+																				payload:a,
+																			});
+																			}} 
+																			name="submit" value="Add to cart" className="button"/>
+																		)}
 																	</fieldset>
 																</form>
 															</div>
@@ -212,8 +221,22 @@ function Offers(){
 																		<input type="hidden" name="discount_amount" value="1.00" />
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="button" name="submit" value="Add to cart" className="button" />
+																		{cart.some(p=>p.id===items.id)?(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'REMOVE_FROM_CART',
+																				payload:items,
+																			});
+																			}}  name="submit" value="Remove from Cart" className="buttonRemove"/>
+																		):(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'ADD_TO_CART',
+																				payload:items,
+																			});
+																			}} 
+																			name="submit" value="Add to cart" className="button"/>
+																		)}
 																	</fieldset>
 																</form>
 															</div>
@@ -264,8 +287,22 @@ function Offers(){
 																		<input type="hidden" name="discount_amount" value="1.00" />
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
-																		<input type="hidden" name="cancel_return" value=" " />
-																		<input type="button" name="submit" value="Add to cart" className="button" />
+																		{cart.some(p=>p.id===items.id)?(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'REMOVE_FROM_CART',
+																				payload:items,
+																			});
+																			}}  name="submit" value="Remove from Cart" className="buttonRemove"/>
+																		):(
+																			<input type="button" 
+																			onClick={()=>{dispatch({
+																				type:'ADD_TO_CART',
+																				payload:items,
+																			});
+																			}} 
+																			name="submit" value="Add to cart" className="button"/>
+																		)}
 																	</fieldset>
 																</form>
 															</div>
