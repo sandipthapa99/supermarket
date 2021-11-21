@@ -8,6 +8,8 @@ import './css/offers.css';
 import {FaStar} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import {CartState} from "../context/Context";
+import { Link } from 'react-router-dom';
+
 
 
 function Offers(){
@@ -52,7 +54,7 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img src={b.image} title="" alt=" "  /></a>		
+																<Link to="/single"><img src={b.image} title="" alt=" "  /></Link>		
 																<p>{b.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
@@ -121,7 +123,7 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img src={a.image} title="" alt=" "  /></a>		
+																<Link to="/single"><img src={a.image} title="" alt=" "  /></Link>		
 																<p>{a.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
@@ -195,7 +197,7 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={items.image} /></a>		
+																<Link to="/single"><img title=" " alt=" " src={items.image} /></Link>		
 																<p>{items.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
@@ -261,7 +263,7 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<a href="products.html"><img title=" " alt=" " src={items.image} /></a>		
+																<Link to="/single"><img title=" " alt=" " src={items.image} /></Link>		
 																<p>{items.name}</p>
 																<div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>

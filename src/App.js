@@ -21,6 +21,7 @@ import PersonalCare from './pages/PersonalCare';
 import Beverages from './pages/Beverages';
 import Cart from './pages/Cart';
 import About from './pages/About';
+import SingleProduct from './components/SingleProduct';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
       <Route path='/beverages' element={<Beverages/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/single' element={<SingleProduct/>}/>
     </Routes>
     <Footer/>
     <BottomFooter/>
