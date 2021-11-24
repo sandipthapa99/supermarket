@@ -8,6 +8,7 @@ import one4 from '../assets/images/14.png';
 import one5 from '../assets/images/15.png';
 import one6 from '../assets/images/16.png';
 import one7 from '../assets/images/17.png';
+import Categories from "../components/Categories";
 
 
 function Groceries(){
@@ -28,7 +29,8 @@ function Groceries(){
 	<div className="products">
 		<div className="container">
 			<div className="col-md-4 products-left">
-				<div className="categories">
+				<Categories/>
+				{/* <div className="categories">
 					<h2>Categories</h2>
 					<ul className="cate">
 						<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Fruits And Vegetables</a></li>
@@ -63,7 +65,7 @@ function Groceries(){
 								<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Shaving Needs</a></li>
 							</ul>
 					</ul>
-				</div>																																												
+				</div>																																												 */}
 			</div>
 			<div className="col-md-8 products-right">
 				<div className="products-right-grid">

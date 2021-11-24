@@ -5,6 +5,8 @@ import NewOffers from '../components/NewOffers';
 import Offers from '../components/Offers';
 import Slider from '../components/Slider';
 import { Helmet } from 'react-helmet';
+import DataFetching from '../components/DataFetching';
+import {ProductsContext} from '../context/ProductsContext';
 
 function Home(){
     return(

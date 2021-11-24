@@ -13,6 +13,7 @@ function Navigation(){
 				<Navbar.Collapse>
 				<Nav>
 					<Nav.Link><Link to="/" className="navTitle">Home</Link></Nav.Link>
+					<Nav.Link><Link to="/products" className="navTitle">Products</Link></Nav.Link>
 
 					<NavDropdown id="noUnderline" title={<span className="navTitle">Groceries</span>}>
 						<NavDropdown.Item id="droplist"><span className="dropdownTitle">All Groceries</span></NavDropdown.Item>
