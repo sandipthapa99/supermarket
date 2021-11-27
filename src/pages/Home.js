@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import BrandStore from '../components/BrandStore';
 import Carousels from '../components/Carousels';
 import NewOffers from '../components/NewOffers';
@@ -9,16 +9,47 @@ import DataFetching from '../components/DataFetching';
 import {ProductsContext} from '../context/ProductsContext';
 
 function Home(){
+    const [products, setProducts] = useState([]);
+    const [loading,setLoading] = useState(true);
+
+    useEffect(()=>{
+        loadData();
+    },[]);
+
+    const loadData = async()=>{
+        await fetch("https://uat.ordering-boafresh.ekbana.net/api/v4/newhome", {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
+                    'Warehouse-Id':'1'
+                    
+                }
+            })
+            .then(respose => {
+                return respose.json();
+            })
+            .then(data=>{
+                setProducts(data.data);
+                setLoading(false);
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+    }
+    // console.log(products);
     return(
         <div>
             <Helmet>
                 <title>Supermarket | Home</title>
 			</Helmet>
+            <ProductsContext.Provider value={products}>
             <Slider/>
             <Offers/>
             <Carousels/>
             <BrandStore/>
             <NewOffers/>
+            </ProductsContext.Provider>
         </div>
     );
 }

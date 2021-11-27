@@ -1,30 +1,33 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import img1 from '../assets/images/11.jpg';
 import img2 from '../assets/images/22.jpg';
 import img3 from '../assets/images/44.jpg';
 
 import {Carousel} from 'react-bootstrap';
+import { ProductsContext } from '../context/ProductsContext';
 
 function Slider(){
+	const sth = useContext(ProductsContext);
+	console.log(sth[0].details);
     return(
 		<div className="skdslider">
 			<Carousel fade={true} controls={false} interval={3000} indicators={false}>
 				<Carousel.Item>
-					<img src={img1} alt="" width="100%"/>
+					<img src={sth[0].details[0].images} alt="" width="100%"/>
 					<div className="slide-desc">
-						<h3>Buy Rice Products Are Now On Line With Us</h3>
+						{/* <h3>Buy Rice Products Are Now On Line With Us</h3> */}
 					</div>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img src={img2} alt="" width="100%"/>
+					<img src={sth[0].details[1].images} alt="" width="100%"/>
 					<div className="slide-desc">
-						<h3>Whole Spices Products Are Now On Line With Us</h3>
+						{/* <h3>Whole Spices Products Are Now On Line With Us</h3> */}
 					</div>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img src={img3} alt="" width="100%"/>
+					<img src={sth[0].details[0].images} alt="" width="100%"/>
 					<div className="slide-desc">
-						<h3>Whole Spices Products Are Now On Line With Us</h3>
+						{/* <h3>Whole Spices Products Are Now On Line With Us</h3> */}
 					</div>
 				</Carousel.Item>
 			</Carousel>

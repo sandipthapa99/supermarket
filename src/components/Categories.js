@@ -1,5 +1,7 @@
 import React from 'react'
 import {FaHome,FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 
 function Categories() {
@@ -8,8 +10,8 @@ function Categories() {
             <div className="categories">
 					<h2>Categories</h2>
 					<ul className="cate">
-					<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All Products</a></li>
-						<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Fruits And Vegetables</a></li>
+					<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All Products</Link></li>
+						<li><Link to="/products/test"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Fruits And Vegetables</Link></li>
 							<ul>
 								<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Cuts & Sprouts</a></li>
 								<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Flowers</a></li>
