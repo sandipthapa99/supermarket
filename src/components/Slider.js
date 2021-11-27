@@ -8,26 +8,32 @@ import { ProductsContext } from '../context/ProductsContext';
 
 function Slider(){
 	const sth = useContext(ProductsContext);
-	console.log(sth[0].details);
+	console.log(sth);
     return(
 		<div className="skdslider">
+			{/* {sth.map(pp=>(
+				<div key = {pp.id}>
+					{(typeof(pp.details)=='object')?<div>{pp.details.map(im=>(
+						<div>{im.images}</div>))}</div>:null}
+				</div>
+			))} */}
 			<Carousel fade={true} controls={false} interval={3000} indicators={false}>
 				<Carousel.Item>
-					<img src={sth[0].details[0].images} alt="" width="100%"/>
+					<img src={img1} alt="" width="100%"/>
 					<div className="slide-desc">
-						{/* <h3>Buy Rice Products Are Now On Line With Us</h3> */}
+						<h3>Buy Rice Products Are Now On Line With Us</h3>
 					</div>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img src={sth[0].details[1].images} alt="" width="100%"/>
+					<img src={img2} alt="" width="100%"/>
 					<div className="slide-desc">
-						{/* <h3>Whole Spices Products Are Now On Line With Us</h3> */}
+						<h3>Whole Spices Products Are Now On Line With Us</h3>
 					</div>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img src={sth[0].details[0].images} alt="" width="100%"/>
+					<img src={img3} alt="" width="100%"/>
 					<div className="slide-desc">
-						{/* <h3>Whole Spices Products Are Now On Line With Us</h3> */}
+						<h3>Whole Spices Products Are Now On Line With Us</h3>
 					</div>
 				</Carousel.Item>
 			</Carousel>
