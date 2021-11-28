@@ -10,7 +10,7 @@ import {} from './DataFetching';
 function CategoryBody() {
     
     const products = useContext(ProductsContext);
-	console.log(products);
+	// console.log(products[0].images);
     return (
             <div class="col-md-8 products-right">
 				<div class="products-right-grid">

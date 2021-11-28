@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios';
 
 import CategoriesBody from "../components/CategoryBody";
 import {ProductsContext} from '../context/ProductsContext';
+import Loader from './Loader';
 
 
 function DataFetching() {
@@ -35,7 +35,7 @@ function DataFetching() {
         <div>
 
             <ProductsContext.Provider value={products}>
-            {loading?<div>Data Loading.....</div>:<CategoriesBody/>}
+            {loading?<Loader/>:<CategoriesBody/>}
 			
 			</ProductsContext.Provider>
         </div>

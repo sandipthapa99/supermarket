@@ -7,6 +7,7 @@ import Slider from '../components/Slider';
 import { Helmet } from 'react-helmet';
 import DataFetching from '../components/DataFetching';
 import {ProductsContext} from '../context/ProductsContext';
+import Loader from '../components/Loader';
 
 function Home(){
     const [products, setProducts] = useState([]);
@@ -44,11 +45,14 @@ function Home(){
                 <title>Supermarket | Home</title>
 			</Helmet>
             <ProductsContext.Provider value={products}>
+            {loading?<Loader style={{margin:"0 auto"}}/>:
+            <div>
             <Slider/>
             <Offers/>
             <Carousels/>
             <BrandStore/>
             <NewOffers/>
+            </div>}
             </ProductsContext.Provider>
         </div>
     );
