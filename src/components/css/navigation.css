@@ -9,6 +9,7 @@
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .navTitle:hover,.navTitle:focus,.navTitle:active{
   text-decoration: none;
@@ -45,4 +46,13 @@
 
 #noUnderline:focus{
 text-decoration: none;
+}
+
+@media (max-width:991px){
+  .bg-mybg .container{
+    width: 80%;
+  }
+  .navTitle{
+    padding: 0;
+  }
 }

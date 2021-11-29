@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import b1 from '../assets/images/b1.jpg';
 import b3 from '../assets/images/b3.jpg';
 import p2 from '../assets/images/p2.jpg';
@@ -6,19 +6,20 @@ import p3 from '../assets/images/p3.jpg';
 import p4 from '../assets/images/p4.jpg';
 import oneoneone from '../assets/images/111.jpg';
 import {Carousel} from 'react-bootstrap';
+import { ProductsContext } from '../context/ProductsContext';
+
 
 function Carousels(){
+	const sth = useContext(ProductsContext);
+	console.log(sth);
     return(
         <div>
 			<Carousel controls={false} indicators={true} interval={3000}>
 				<Carousel.Item>
-					<img src={b1} alt="slide 1" width="100%"/>
+					<img src={sth[6].details[0].images} alt="slide 1" width="100%"/>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img src={b3} alt="slide 1" width="100%"/>
-				</Carousel.Item>
-				<Carousel.Item>
-					<img src={b1} alt="slide 1" width="100%"/>
+					<img src={sth[6].details[1].images} alt="slide 1" width="100%"/>
 				</Carousel.Item>
 			</Carousel>
 

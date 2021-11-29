@@ -50,7 +50,6 @@ function Home(){
             <Slider/>
             <Offers/>
             <Carousels/>
-            <BrandStore/>
             <NewOffers/>
             </div>}
             </ProductsContext.Provider>
