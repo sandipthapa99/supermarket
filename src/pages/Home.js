@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import DataFetching from '../components/DataFetching';
 import {ProductsContext} from '../context/ProductsContext';
 import Loader from '../components/Loader';
+import ProductCategory from '../components/ProductCategory';
 
 function Home(){
     const [products, setProducts] = useState([]);
@@ -48,6 +49,7 @@ function Home(){
             {loading?<Loader/>:
             <div>
             <Slider/>
+            <ProductCategory/>
             <Offers/>
             <Carousels/>
             <NewOffers/>

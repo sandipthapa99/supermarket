@@ -11,8 +11,6 @@ import Categories from "../components/Categories";
 function NoodlesPage(){
     const data = useContext(ProductsContext);
     const noodles =[]
-    console.log(data)
-
     data.map(a=>{
         if(a.categoryTitle==="NOODLES"){
             noodles.push(a);
@@ -28,7 +26,7 @@ function NoodlesPage(){
             <div className="container">
                 <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
                 <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
-                    <li className="active">Products/Noodles</li>
+                    <li className="active">Products / Noodles</li>
                 </ol>
             </div>
 	    </div>

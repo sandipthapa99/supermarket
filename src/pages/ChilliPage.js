@@ -11,7 +11,6 @@ import Categories from "../components/Categories";
 function ChilliPage(){
     const data = useContext(ProductsContext);
     const chilli =[]
-    console.log(data)
 
     data.map(a=>{
         if(a.categoryTitle==="CHILLI"){
@@ -28,7 +27,7 @@ function ChilliPage(){
             <div className="container">
                 <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
                 <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
-                    <li className="active">Products/Chilli</li>
+                    <li className="active">Products / Chilli</li>
                 </ol>
             </div>
 	    </div>

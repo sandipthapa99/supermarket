@@ -28,7 +28,7 @@ function MomoPage(){
             <div className="container">
                 <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
                 <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
-                    <li className="active">Momos</li>
+                    <li className="active">Products / Momos</li>
                 </ol>
             </div>
 	    </div>

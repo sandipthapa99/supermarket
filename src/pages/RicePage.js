@@ -12,8 +12,7 @@ function RicePage(){
     const data = useContext(ProductsContext);
     const rice =[];
 	console.log(data);
-
-    rice.map(a=>{
+    data.map(a=>{
         if(a.categoryTitle === "RICE"){
             rice.push(a);
         }
