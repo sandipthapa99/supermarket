@@ -29,6 +29,7 @@ import ChilliPage from './pages/ChilliPage';
 import {ProductsContext} from './context/ProductsContext';
 import SandwichPage from './pages/SandwichPage';
 import RicePage from './pages/RicePage';
+import PizzaPage from './pages/PizzaPage';
 
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
       <Route path='/sandwich' element={<SandwichPage/>}/>
       <Route path='/healthy%20choice' element={<MomoPage/>}/>
       <Route path='/rice' element={<RicePage/>}/>
+      <Route path='/pizza' element={<PizzaPage/>}/>
     </Routes>
     </ProductsContext.Provider>
     <Footer/>
