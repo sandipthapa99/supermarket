@@ -21,8 +21,6 @@ function Footer(){
 					<ul className="info"> 
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/about">About Us</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/contact">Contact Us</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/shortcodes">Short Codes</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/faq">FAQ's</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/products">Special Products</Link></li>
 					</ul>
 				</div>
@@ -40,7 +38,7 @@ function Footer(){
 					<h3>Profile</h3>
 					<ul className="info"> 
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/products">Store</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/checkout">My Cart</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/cart">My Cart</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/login">Login</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/signup">Create Account</Link></li>
 					</ul>
@@ -52,7 +50,7 @@ function Footer(){
 		<div className="footer-copy">
 			
 			<div className="container">
-				<p>© 2021 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">Ekbana</a></p>
+				<p>© 2021 Super Market. All rights reserved | Developed by <a href="https://www.sandipthapa.com.np" target="_blank">Sandip Thapa</a></p>
 			</div>
 		</div>
 		

@@ -16,10 +16,10 @@ function Carousels(){
         <div>
 			<Carousel controls={false} indicators={true} interval={3000}>
 				<Carousel.Item>
-					<img src={sth[6].details[0].images} alt="slide 1" width="100%"/>
+					<img src={sth[5].details[0].images} alt="slide 1" width="100%"/>
 				</Carousel.Item>
 				<Carousel.Item>
-					<img src={sth[6].details[1].images} alt="slide 1" width="100%"/>
+					<img src={sth[5].details[1].images} alt="slide 1" width="100%"/>
 				</Carousel.Item>
 			</Carousel>
 

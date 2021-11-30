@@ -14,12 +14,7 @@ function Slider(){
 	// console.log(sth[6].details);
     return(
 		<div className="skdslider">
-			{/* {sth.map(pp=>(
-				<div key = {pp.id}>
-					{(typeof(pp.details)=='object')?<div>{pp.details.map(im=>(
-						<div>{im.images}</div>))}</div>:null}
-				</div>
-			))} */}
+
 			<Carousel fade={true} controls={false} interval={3000} indicators={false}>
 				<Carousel.Item>
 					<img src={sth[0].details[1].images} alt="" width="100%"/>

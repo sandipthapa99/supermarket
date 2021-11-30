@@ -1,14 +1,16 @@
 import React, {useState, useEffect} from 'react'
 
-import CategoriesBody from "../components/CategoryBody";
-import {ProductsContext} from '../context/ProductsContext';
-import Loader from './Loader';
+import MomoBody from "../../components/MomoBody";
+import {ProductsContext} from '../../context/ProductsContext';
+import Loader from '../Loader';
 
 
-function DataFetching() {
-    const [products, setProducts] = useState([]);
+function MomoFetching() {
+    const [momos, setMomos] = useState([]);
     const [loading,setLoading] = useState(true);
-
+    const momo = [];
+    
+    console.log(momos);
     useEffect(()=>{
         fetch("https://uat.ordering-boafresh.ekbana.net/api/v4/product", {
                 method: 'get',
@@ -23,21 +25,29 @@ function DataFetching() {
                 return respose.json();
             })
             .then(data=>{
-                // console.log(data);
-                setProducts(data.data);
+                const mydata=data.data;
+           
+                mydata.map(a=>{
+                    if(a.categoryTitle==="MOMO"){
+                        momo.push(a);
+                    }
+                    
+                });
+                setMomos(momo);
                 setLoading(false);
             })
             .catch(err=>{
                 console.log(err);
             })
+            
     },[])
     return (
         <div>
-            <ProductsContext.Provider value={products}>
-            {loading?<Loader/>:<CategoriesBody/>}
+            <ProductsContext.Provider value={momos}>
+            {loading?<Loader/>:<MomoBody/>}
 			</ProductsContext.Provider>
         </div>
     )
 }
 
-export default DataFetching
+export default MomoFetching

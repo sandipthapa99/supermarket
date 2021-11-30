@@ -45,7 +45,7 @@ function Home(){
                 <title>Supermarket | Home</title>
 			</Helmet>
             <ProductsContext.Provider value={products}>
-            {loading?<Loader style={{margin:"0 auto"}}/>:
+            {loading?<Loader/>:
             <div>
             <Slider/>
             <Offers/>

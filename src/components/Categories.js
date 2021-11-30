@@ -16,12 +16,12 @@ function Categories() {
 								<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Pizza 1</a></li>
 								<li><a href="products.html"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Pizza 2</a></li>
 							</ul>
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Momo</Link></li>
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Noodles</Link></li>
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Chilli</Link></li>
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sandwhich</Link></li>
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Healthy Choice</Link></li>
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Rice</Link></li>
+						<li><Link to="/momo"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Momo</Link></li>
+						<li><Link to="/noodles"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Noodles</Link></li>
+						<li><Link to="/chilli"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Chilli</Link></li>
+						<li><Link to="/sandwich"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sandwich</Link></li>
+						<li><Link to="/healthy"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Healthy Choice</Link></li>
+						<li><Link to="/rice"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Rice</Link></li>
 
 					</ul>
 				</div>	
