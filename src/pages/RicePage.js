@@ -21,13 +21,13 @@ function RicePage(){
     return(
         <div>
 			<Helmet>
-                <title>Supermarket | Momo</title>
+                <title>Supermarket | Rice</title>
 			</Helmet>
             <div className="breadcrumbs">
             <div className="container">
                 <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
                 <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
-                    <li className="active">Products/Rice</li>
+                    <li className="active">Products / Rice</li>
                 </ol>
             </div>
 	    </div>
