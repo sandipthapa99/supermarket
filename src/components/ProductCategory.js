@@ -44,7 +44,7 @@ function ProductCategory() {
                         <Card.Text>
                         {cat.productCount} products
                         </Card.Text>
-                        <Link to="/">Shop Now <FaArrowCircleRight style={{color:"#fe9126"}}/></Link> 
+                        <Link to={cat.title.toLowerCase()}>Shop Now <FaArrowCircleRight style={{color:"#fe9126"}}/></Link> 
                     </Card.Body>
                 </Card>
                 ))}

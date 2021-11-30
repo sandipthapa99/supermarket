@@ -84,7 +84,7 @@ function App() {
       <Route path='/noodles' element={<NoodlesPage/>}/>
       <Route path='/chilli' element={<ChilliPage/>}/>
       <Route path='/sandwich' element={<SandwichPage/>}/>
-      <Route path='/healthy' element={<MomoPage/>}/>
+      <Route path='/healthy%20choice' element={<MomoPage/>}/>
       <Route path='/rice' element={<RicePage/>}/>
     </Routes>
     </ProductsContext.Provider>
