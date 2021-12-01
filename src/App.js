@@ -30,7 +30,7 @@ import {ProductsContext} from './context/ProductsContext';
 import SandwichPage from './pages/SandwichPage';
 import RicePage from './pages/RicePage';
 import PizzaPage from './pages/PizzaPage';
-
+import ScroolTop from './components/ScroolTop';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -61,6 +61,7 @@ function App() {
   return (
     <div>
     <Router>
+    <ScroolTop/>
     <Header/>
     <Navigation/>
     <ProductsContext.Provider value={products}>
@@ -92,6 +93,7 @@ function App() {
     </ProductsContext.Provider>
     <Footer/>
     <BottomFooter/>
+    
     </Router>
     </div>
   );

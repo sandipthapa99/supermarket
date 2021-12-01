@@ -9,6 +9,8 @@ import DataFetching from '../components/DataFetching';
 import {ProductsContext} from '../context/ProductsContext';
 import Loader from '../components/Loader';
 import ProductCategory from '../components/ProductCategory';
+import ScroolTop from '../components/ScroolTop';
+
 
 function Home(){
     const [products, setProducts] = useState([]);
@@ -49,6 +51,7 @@ function Home(){
             {loading?<Loader/>:
             <div>
             <Slider/>
+            <ScroolTop/>
             <ProductCategory/>
             <Offers/>
             <Carousels/>

@@ -22,12 +22,12 @@ function Navigation(){
 						<NavDropdown.Item id="droplist"><Link to="/groceries" className="dropItems">Pizza 2</Link></NavDropdown.Item>
 					</NavDropdown>
 
-					<Nav.Link><Link to="/gourmet" className="navTitle">Momo</Link></Nav.Link>
-					<Nav.Link><Link to="/offers" className="navTitle">Noodles</Link></Nav.Link>
-					<Nav.Link><Link to="/contact" className="navTitle">Chilli</Link></Nav.Link>
-					<Nav.Link><Link to="/contact" className="navTitle">Sandwhich</Link></Nav.Link>
-					<Nav.Link><Link to="/contact" className="navTitle">Healthy Choice</Link></Nav.Link>
-					<Nav.Link><Link to="/contact" className="navTitle">Rice</Link></Nav.Link>
+					<Nav.Link><Link to="/momo" className="navTitle">Momo</Link></Nav.Link>
+					<Nav.Link><Link to="/noodles" className="navTitle">Noodles</Link></Nav.Link>
+					<Nav.Link><Link to="/chilli" className="navTitle">Chilli</Link></Nav.Link>
+					<Nav.Link><Link to="/sandwich" className="navTitle">Sandwhich</Link></Nav.Link>
+					<Nav.Link><Link to="/healthy%20choice" className="navTitle">Healthy Choice</Link></Nav.Link>
+					<Nav.Link><Link to="/rice" className="navTitle">Rice</Link></Nav.Link>
 				</Nav>
 				</Navbar.Collapse>	
 				
