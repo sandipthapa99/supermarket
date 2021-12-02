@@ -12,7 +12,8 @@ function Login(){
 
 	const successToast = ()=>{
 		toast.success("Login Successful",{
-			position:"top-center"
+			position:"top-center",
+			autoClose:"1000",
 		});
 	}
 	const login = async (e)=>{
@@ -86,7 +87,8 @@ function Login(){
 			<p><Link to='/signup'>Register Here</Link> (Or) go back to <Link to='/'>Home <FaChevronRight size={12} className="myicon"/></Link></p>
 		</div>
 	</div>
-	<ToastContainer/>
+	<ToastContainer
+	autoClose={1000}/>
         </div>
     );
 }

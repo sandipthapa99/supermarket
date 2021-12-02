@@ -2,17 +2,11 @@
     width: 350px;
     background-color: #efefef;
     border: none;
-    cursor: pointer;
-    transition: all 0.5s;
     margin: 0;
 }
 
 .image img {
-    transition: all 0.5s
-}
-
-.card:hover .image img {
-    transform: scale(1.1)
+    border-radius: 50%;
 }
 
 .name {

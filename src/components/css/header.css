@@ -40,3 +40,10 @@ button{
 li a{
     font-weight: 500;
 }
+
+.agile-login{
+    right: 2px;
+}
+.logList{
+    float: right;
+}

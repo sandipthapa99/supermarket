@@ -35,12 +35,12 @@ function Header() {
           {localStorage.getItem('access_token')?
           <div>
             <div className="agile-login">
-              <ul>
-                <li>
+              <ul className="logList">
+                {/* <li>
                   <p>Hello, Sandip</p>
-                </li>
+                </li> */}
                 <li>
-                  <Link to='/profile' style={{paddingRight:"10px"}}>Profile</Link>
+                  <Link to='/profile' style={{paddingRight:"15px"}} >Profile</Link>
                   <button style={{color:"#fff"}} onClick={logOut}>Log Out</button>
                 </li>
               </ul>
@@ -103,17 +103,18 @@ function Header() {
             </form>
           </div>
           </div>:
-          <div className="agile-login">
-            <ul>
+          <div className="agile-login" style={{float:"right"}}>
+            <ul className="logList">
+            <li>
+                <Link to="/contact">Help</Link>
+              </li>
               <li>
                 <Link to="/signup">Create Account</Link>
               </li>
               <li>
                 <Link to="/login">Login</Link>
               </li>
-              <li>
-                <Link to="/contact">Help</Link>
-              </li>
+              
             </ul>
           </div>}
           
