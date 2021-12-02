@@ -40,6 +40,7 @@ function Header() {
                   <p>Hello, Sandip</p>
                 </li>
                 <li>
+                  <Link to='/profile' style={{paddingRight:"10px"}}>Profile</Link>
                   <button style={{color:"#fff"}} onClick={logOut}>Log Out</button>
                 </li>
               </ul>

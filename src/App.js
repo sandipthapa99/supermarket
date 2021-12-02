@@ -31,6 +31,7 @@ import SandwichPage from './pages/SandwichPage';
 import RicePage from './pages/RicePage';
 import PizzaPage from './pages/PizzaPage';
 import ScroolTop from './components/ScroolTop';
+import Profile from './pages/Profile';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -89,6 +90,7 @@ function App() {
       <Route path='/healthy%20choice' element={<MomoPage/>}/>
       <Route path='/rice' element={<RicePage/>}/>
       <Route path='/pizza' element={<PizzaPage/>}/>
+      <Route path='/profile' element={<Profile/>}/>
     </Routes>
     </ProductsContext.Provider>
     <Footer/>

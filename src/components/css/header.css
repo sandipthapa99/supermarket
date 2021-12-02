@@ -37,3 +37,6 @@
 button{
     background: none;
 }
+li a{
+    font-weight: 500;
+}
