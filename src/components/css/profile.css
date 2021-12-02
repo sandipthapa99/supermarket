@@ -1,10 +1,10 @@
-.column {
+#mycolumn {
     float: left;
     width: 30%;
     padding: 0 10px;
   }
 
-  .column:nth-child(1){
+  #mycolumn:nth-child(1){
       margin-right: 50px;
   }
   
@@ -61,7 +61,7 @@
     }
   }
   
-  .card {
+  #card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
     text-align: center;

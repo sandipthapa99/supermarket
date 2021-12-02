@@ -118,8 +118,8 @@ function Profile() {
     return (
     <div className="container mt-5 mb-5">
         <div class="row">
-            <div class="column">
-                <Card>
+            <div class="column" id="mycolumn">
+                <Card id="card">
                 <Card.Img src={user.image} style={{position:"relative",width:"100%"}}/>
                 <h2>{user.firstName} {user.lastName}</h2>
                 <p>{user.email}</p>
@@ -132,8 +132,8 @@ function Profile() {
                 </Card>
             </div>
 
-             <div class="column">
-                <div class="card">
+             <div class="column" id="mycolumn">
+                <div class="card" id="card">
                     <h3>Update Profile</h3>
                     <Form onSubmit={updateProfile}>
                         <input type="text" placeholder="First Name" onChange={(e)=>setFirstName(e.target.value)}></input>
@@ -144,8 +144,8 @@ function Profile() {
                  </div>
             </div>
   
-            <div class="column">
-                <div class="card">
+            <div class="column" id="mycolumn">
+                <div class="card" id="card">
                     <h3>Change Password</h3>
                     <Form onSubmit={changePassword}>
                         <input type="Password" placeholder="Previous Password" onChange={(e)=>setOldPass(e.target.value)}></input>
