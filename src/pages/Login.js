@@ -1,9 +1,58 @@
-import React from "react";
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import {FaHome,FaChevronRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login(){
+	var error = document.getElementById('error');
+	const [username, setUsername] = useState("");
+	const [pass, setPass] = useState("");
+
+	const diffToast = ()=>{
+		toast.success("Login Successful",{
+			position:"top-center"
+		});
+	}
+	const login = async (e)=>{
+		e.preventDefault();
+		await fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/auth/login", {
+                method: 'POST',
+                headers: {
+					'warehouse-id':'1',
+                    'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
+					"Content-Type": "application/json"
+  
+                },
+				body: JSON.stringify({
+					client_id: 2,
+        			client_secret: "ZkPYPKRiUsEzVke7Q5sq21DrVvYmNK5w5bZKGzQo",
+        			grant_type: "password",
+					username:username,
+					password:pass,
+				})
+            })
+            .then(respose => {
+                return respose.json();
+            })
+            .then(data=>{
+                if(data.access_token){
+					error.innerHTML = "";
+					window.localStorage.setItem("access_token", JSON.stringify(data.access_token))
+					diffToast();
+					e.target.reset();
+					window.location="/";
+				}
+				else{
+					error.innerHTML = data.errors[0].message;
+				}
+            })
+            .catch(err=>{
+                console.log(err);
+            })
+	}
+
     return(
         <div>
 			<Helmet>
@@ -23,9 +72,10 @@ function Login(){
 			<h2>Login Form</h2>
 		
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form>
-					<input type="email" placeholder="Email Address" required=" " />
-					<input type="password" placeholder="Password" required=" " />
+				<form onSubmit={login}>
+					<input type="email" placeholder="Email Address" required=" " onChange={(e)=>setUsername(e.target.value)}/>
+					<input type="password" placeholder="Password" required=" " onChange={(e)=>setPass(e.target.value)}/>
+					<div id="error" className="error"></div>
 					<div class="forgot">
 						<a href="#">Forgot Password?</a>
 					</div>
@@ -36,6 +86,7 @@ function Login(){
 			<p><Link to='/signup'>Register Here</Link> (Or) go back to <Link to='/'>Home <FaChevronRight size={12} className="myicon"/></Link></p>
 		</div>
 	</div>
+	<ToastContainer/>
         </div>
     );
 }

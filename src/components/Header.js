@@ -15,6 +15,10 @@ import { CartState } from "../context/Context";
 import './css/header.css'
 
 function Header() {
+  function logOut(){
+    localStorage.clear();
+    window.location="/";
+    }
 
   const {state: {cart},dispatch} = CartState();
 
@@ -28,6 +32,17 @@ function Header() {
               <Link to="/products">SHOP NOW</Link>
             </p>
           </div>
+          {localStorage.getItem('access_token')?
+          <div className="agile-login">
+            <ul>
+              <li>
+                <p>Hello, Sandip</p>
+              </li>
+              <li>
+                <button style={{color:"#fff"}} onClick={logOut}>Log Out</button>
+              </li>
+            </ul>
+          </div>:
           <div className="agile-login">
             <ul>
               <li>
@@ -40,7 +55,7 @@ function Header() {
                 <Link to="/contact">Help</Link>
               </li>
             </ul>
-          </div>
+          </div>}
           <div className="product_list_header">
             <form action="#" method="post" className="last">
               <input type="hidden" name="cmd" value="_cart" />

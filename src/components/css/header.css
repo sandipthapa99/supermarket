@@ -34,3 +34,6 @@
     float: right;
     text-transform: capitalize;
 }
+button{
+    background: none;
+}

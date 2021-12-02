@@ -945,8 +945,14 @@ a.w3_agile_vimeo:hover{
 .login-form-grids input[type="password"]{
 	margin:1em 0 0;
 }
+#error{
+    color:#e74c3c;
+    font-size:14px;
+    padding-top: 7px;
+
+}
 .forgot {
-    margin: 1.5em 0 0;
+    margin: 1em 0 0;
 }
 .login-form-grids input[type="submit"]{
 	outline: none;

@@ -15,7 +15,8 @@ function DataFetching() {
                 headers: {
                     'Content-Type': 'application/json',
                     'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
-                    'Warehouse-Id':'1'
+                    'Warehouse-Id':'1',
+                    'perPage':6,
                     
                 }
             })
