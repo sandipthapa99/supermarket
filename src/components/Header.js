@@ -33,30 +33,18 @@ function Header() {
             </p>
           </div>
           {localStorage.getItem('access_token')?
-          <div className="agile-login">
-            <ul>
-              <li>
-                <p>Hello, Sandip</p>
-              </li>
-              <li>
-                <button style={{color:"#fff"}} onClick={logOut}>Log Out</button>
-              </li>
-            </ul>
-          </div>:
-          <div className="agile-login">
-            <ul>
-              <li>
-                <Link to="/signup">Create Account</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/contact">Help</Link>
-              </li>
-            </ul>
-          </div>}
-          <div className="product_list_header">
+          <div>
+            <div className="agile-login">
+              <ul>
+                <li>
+                  <p>Hello, Sandip</p>
+                </li>
+                <li>
+                  <button style={{color:"#fff"}} onClick={logOut}>Log Out</button>
+                </li>
+              </ul>
+            </div>
+            <div className="product_list_header">
             <form action="#" method="post" className="last">
               <input type="hidden" name="cmd" value="_cart" />
               <input type="hidden" name="display" value="1" />
@@ -113,6 +101,21 @@ function Header() {
               </Navbar>
             </form>
           </div>
+          </div>:
+          <div className="agile-login">
+            <ul>
+              <li>
+                <Link to="/signup">Create Account</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+              <li>
+                <Link to="/contact">Help</Link>
+              </li>
+            </ul>
+          </div>}
+          
           <div className="clearfix"> </div>
         </div>
       </div>

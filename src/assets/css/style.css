@@ -132,7 +132,7 @@ button.btn.btn-default.search:hover {
     float: left;
     width: 40%;
     text-align: center;
-    padding: 9px 0;
+    padding-top: 15px;
 }
 .agile-login ul li {
     display: inline-block;
@@ -932,7 +932,7 @@ a.w3_agile_vimeo:hover{
 	background:#F7F7F9;
 	margin:3em auto 0;
 }
-.login-form-grids input[type="email"],.login-form-grids input[type="password"],.login-form-grids input[type="text"]{
+.login-form-grids input[type="email"],.login-form-grids input[type="password"],.login-form-grids input[type="text"],.login-form-grids input[type="number"]{
 	outline: none;
     border: 1px solid #DBDBDB;
     padding: 10px 10px 10px 10px;
@@ -942,10 +942,10 @@ a.w3_agile_vimeo:hover{
     width: 100%;
 }
 
-.login-form-grids input[type="password"]{
+.login-form-grids input[type="password"], .login-form-grids input[type="number"]{
 	margin:1em 0 0;
 }
-#error{
+#error, #firstNameError, #lastNameError, #emailError, #phoneError, #passwordError{
     color:#e74c3c;
     font-size:14px;
     padding-top: 7px;

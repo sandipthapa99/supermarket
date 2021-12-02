@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom';
 import {FaHome,FaChevronRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
@@ -10,7 +10,7 @@ function Login(){
 	const [username, setUsername] = useState("");
 	const [pass, setPass] = useState("");
 
-	const diffToast = ()=>{
+	const successToast = ()=>{
 		toast.success("Login Successful",{
 			position:"top-center"
 		});
@@ -40,7 +40,7 @@ function Login(){
                 if(data.access_token){
 					error.innerHTML = "";
 					window.localStorage.setItem("access_token", JSON.stringify(data.access_token))
-					diffToast();
+					successToast();
 					e.target.reset();
 					window.location="/";
 				}
