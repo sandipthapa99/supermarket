@@ -2,16 +2,21 @@ import React, {useState, useEffect} from 'react'
 import '../components/css/profile.css'
 import {UserContext} from '../context/UserContext';
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { Col, Row, Image, Card, Form, Container } from "react-bootstrap";
+import { Col, Row, Card, Form, Container } from "react-bootstrap";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {Link} from 'react-router-dom';
 
 
 function Profile() {
     const [user, setUser] = useState([]);
-    const [firstName, setFirstName] = useState([]);
-    const [lastName, setLastName] = useState([]);
-    const [mobile, setMobile] = useState([]);
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [mobile, setMobile] = useState("");
+
+    const [oldPass, setOldPass] = useState("");
+    const [newPass, setNewPass] = useState("");
+    const [confrimPass, setCofrimPass] = useState("");
     var token = JSON.parse(window.localStorage.getItem('access_token'));
 
     useEffect(()=>{
@@ -36,16 +41,15 @@ function Profile() {
             })
             .then(data=>{
                 setUser(data.data);
-                console.log(data.data);
             })
             .catch(err=>{
                 console.log(err);
             })
         }
 
-    const updateProfile =(e)=>{
+    const updateProfile =async (e)=>{
         e.preventDefault();
-        fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/profile", {
+        const mydata = await fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/profile", {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,91 +62,102 @@ function Profile() {
                     "mobile_number": mobile,
                 })
             })
-            .then(respose => {
-                return respose.json();
-            })
-            .then(data=>{
-                // console.log(data);
-                setUser(data);
+            const res = await mydata.json();
+            if(mydata.status===200){
+                e.target.reset();
                 fetchUserData();
                 updateToast();
-            })
-            .catch(err=>{
-                console.log(err);
-            })
+                
+            }
+            else{
+                errorToast(res.errors[0].message);
+            }
     }
     const updateToast = ()=>{
 		toast.success("Profile Updated",{
 			position:"top-center"
 		});
 	}
+    const errorToast = (msg)=>{
+		toast.error(msg,{
+			position:"top-center"
+		});
+	}
+    const passToast = ()=>{
+		toast.success("Password Changed!",{
+			position:"top-center"
+		});
+	}
+
+    const changePassword =async (e)=>{
+        e.preventDefault();
+        const mydata = await fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/profile/change-password", {
+                method: 'POST',
+                headers: {
+                    'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
+                    'Authorization': 'Bearer ' + token,    
+                },
+                body: JSON.stringify({
+                    "old-password": oldPass,
+                    "new-password": newPass,
+                    "confirm-password": confrimPass,
+                })
+            })
+            const res = await mydata.json();
+            if(mydata.status===200){
+                e.target.reset();
+                fetchUserData();
+                passToast();
+                
+            }
+            else{
+                errorToast(res.errors[0].message);
+            }
+    }
 
     return (
-    <div className="container mt-4 mb-4 p-3 d-flex justify-content-left">
-        <Container>
-        <div className="card p-4">
-            <div className=" image d-flex flex-column justify-content-center align-items-center">
-                <img src={user.image} alt="profile" height="100" width="100"/> 
-                <span className="name mt-3">{user.firstName} {user.lastName}</span>
-                <span className="idd"><FaEnvelope/> {user.email}</span>
-                <span className="idd"><FaPhoneAlt/> {user.mobileNumber}</span>
-                <div className="d-flex flex-row justify-content-center align-items-center gap-2"> <span className="idd1">{user.username}</span> <span><i className="fa fa-copy"></i></span> </div>
-                <div className="text mt-3"> <span>Loyality Points: {user.total_loyality_points?user.total_loyality_points:0}</span> </div>
-                <div className=" px-2 rounded mt-4 date " style={{textAlign:"center"}}> <span className="join">Joined: {user.createdAt}<br/>Last updated: {user.updatedAt}</span> </div>
+    <div className="container mt-5 mb-5">
+        <div class="row">
+            <div class="column">
+                <Card>
+                <Card.Img src={user.image} style={{position:"relative",width:"100%"}}/>
+                <h2>{user.firstName} {user.lastName}</h2>
+                <p>{user.email}</p>
+                <p>{user.mobileNumber}</p>
+                <div className="loyality">
+                    <p>Loyality Points: {user.total_loyality_points?user.total_loyality_points:0}</p>
+                    <p>Joined: {user.createdAt}<br/>Last updated: {user.updatedAt}</p>
+                </div>
+                
+                </Card>
             </div>
+
+             <div class="column">
+                <div class="card">
+                    <h3>Update Profile</h3>
+                    <Form onSubmit={updateProfile}>
+                        <input type="text" placeholder="First Name" onChange={(e)=>setFirstName(e.target.value)}></input>
+                        <input type="text" placeholder="Last Name" onChange={(e)=>setLastName(e.target.value)}></input>
+                        <input type="text" placeholder="Mobile Number" onChange={(e)=>setMobile(e.target.value)}></input>
+                        <input type="submit" value="Update" />
+                    </Form>
+                 </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <h3>Change Password</h3>
+                    <Form onSubmit={changePassword}>
+                        <input type="Password" placeholder="Previous Password" onChange={(e)=>setOldPass(e.target.value)}></input>
+                        <input type="Password" placeholder="New Password" onChange={(e)=>setNewPass(e.target.value)}></input>
+                        <input type="Password" placeholder="Confirm Password" onChange={(e)=>setCofrimPass(e.target.value)}></input>
+                        <input type="submit" value="Change" />
+                    </Form>
+                </div>
         </div>
-        </Container>
-        <Container>
-        <Row className="justify-content-right">
-          <Col md={6} className="agileinfo_single_left form-module">
-            <div className="form" id="profile-updt-form">
-              <h2>Update Profile</h2>
-              <Form onSubmit={updateProfile}>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  onChange={(e)=>setFirstName(e.target.value)}
-                ></input>
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  onChange={(e)=>setLastName(e.target.value)}
-                ></input>
-                <input
-                  type="text"
-                  placeholder="Mobile Number"
-                  onChange={(e)=>setMobile(e.target.value)}
-                ></input>
-                <input type="submit" value="Save" />
-              </Form>
-            </div>
-          </Col>
-          <Col md={6} className="agileinfo_single_left form-module">
-            <div className="form" id="pw-change-form">
-              <h2>Change Password </h2>
-              <Form>
-                <input
-                  type="Password"
-                  placeholder="Previous Password"
-                  required
-                ></input>
-                <input
-                  type="Password"
-                  placeholder="New Password"
-                  required
-                ></input>
-                <input
-                  type="Password"
-                  placeholder="Confirm Password"
-                  required
-                ></input>
-                <input type="submit" value="Change" />
-              </Form>
-            </div>
-          </Col>
-          <div className="clearfix"> </div>
-        </Row>
-        </Container>
+  
+</div>
+
         <ToastContainer/>
     </div>
     )

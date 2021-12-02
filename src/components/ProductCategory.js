@@ -50,7 +50,7 @@ function ProductCategory() {
                 ))}
                 </div>
             </div>
-            </div>
+        </div>
     )
 }
 

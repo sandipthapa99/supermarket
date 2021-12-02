@@ -1,70 +1,69 @@
-.card {
-    width: 350px;
-    background-color: #efefef;
+.column {
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+  }
+
+  .column:nth-child(1){
+      margin-right: 50px;
+  }
+  
+  .row {
+      margin: 0 -5px;
+    }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .card input[type="text"],.card input[type="password"]{
+	outline: none;
+    border: 1px solid #DBDBDB;
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+    color: #999;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+}
+.card input[type="submit"]{
+	outline: none;
     border: none;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #fff;
+    display: block;
+    width: 100%;
+    background:#3399cc;
+    margin: 1.5em 0 0;
+}
+.card h3{
+    margin: 10px 0;
+}
+.card h2{
+    padding-top: 10px;
+}
+.card p{
+    font-size: 14px;
+    padding: 0;
     margin: 0;
 }
-
-.image img {
-    border-radius: 50%;
+.loyality{
+    padding-top: 10px;
 }
-
-.name {
-    font-size: 22px;
-    font-weight: bold
-}
-
-.idd {
-    font-size: 14px;
-    font-weight: 600
-}
-
-.idd1 {
-    font-size: 12px
-}
-
-.number {
-    font-size: 22px;
-    font-weight: bold
-}
-.btn-secondary{
-    border-radius: 50%;
-}
-.follow {
-    font-size: 12px;
-    font-weight: 500;
-    color: #444444;
-}
-
-.btn1 {
-    height: 40px;
-    width: 150px;
-    border: none;
-    background-color: #000;
-    color: #aeaeae;
-    font-size: 15px
-}
-
-.text span {
-    font-size: 13px;
-    color: #545454;
-    font-weight: 500
-}
-
-.icons i {
-    font-size: 19px
-}
-
-hr .new1 {
-    border: 1px solid
-}
-
-.join {
-    font-size: 14px;
-    color: #a0a0a0;
-    font-weight: bold;
-}
-
-.date {
-    background-color: #ccc
-}
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
