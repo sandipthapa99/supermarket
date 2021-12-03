@@ -17,7 +17,7 @@ import { CartContext } from "../context/CartContext";
 import './css/header.css'
 
 function Header() {
-  const cartData = useContext(CartContext);
+
   function logOut(){
     localStorage.clear();
     window.location="/";
@@ -53,6 +53,7 @@ function Header() {
               <input type="hidden" name="cmd" value="_cart" />
               <input type="hidden" name="display" value="1" />
               {/* <Link to="/cart"><button className="w3view-cart"><i className="fa fa-cart-arrow-down" aria-hidden="true"><FaCartArrowDown/></i></button></Link> */}
+              
               <Navbar>
                 <Nav>
                   <Dropdown>

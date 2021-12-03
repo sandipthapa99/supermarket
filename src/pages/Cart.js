@@ -4,18 +4,19 @@ import { useState, useEffect } from "react";
 import '../components/css/cart.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loader from "../components/Loader";
 
 
 function Cart(){
-    const removeToast = ()=>{
-		toast.warning("Item removed from cart",{
+    const myToast = (msg, type)=>{
+		toast[type](msg,{
 			position:"top-center"
 		});
 	}
     const [items, setItems] = useState([]);
 	const [loading,setLoading] = useState(true);
     var token = JSON.parse(window.localStorage.getItem('access_token'));
-    console.log(items);
+    // console.log(items);
 
     useEffect(()=>{
         if(token){
@@ -58,6 +59,7 @@ function Cart(){
         const data = await res.json();
         if(res.status === 200){
             fetchCart();
+            myToast("Quantity Increased", "success");
         }
     }
 
@@ -82,6 +84,7 @@ function Cart(){
             const data = await res.json();
             if(res.status === 200){
                 fetchCart();
+                myToast("Quantity Decreased", "warning");
             }
         }
         
@@ -101,7 +104,7 @@ function Cart(){
 
             if(res.status === 204){
                 fetchCart();
-                removeToast();
+                myToast("Item removed from the Cart", "warning");
             }
     }
 
@@ -111,14 +114,18 @@ function Cart(){
                 <title>Supermarket | Cart</title>
 			</Helmet>
             {loading?
-            <div>Loading</div>:
+            <Loader/>:
              <div className="small-container cart-page">
+                 <h3>You have {items.cartProducts.length} unique product(s) in your Cart.</h3>
                  <table className="mytable">
+                     <thead>
                      <tr>
                          <th>Product</th>
                          <th>Quantity</th>
                          <th>SubTotal</th>
                      </tr>
+                     </thead>
+                     <tbody>
                      {items.cartProducts.map(prod=>(
                          <tr key={prod.id}>
                          <td>
@@ -126,7 +133,7 @@ function Cart(){
                                  <img src={prod.product.images[0].imageName}/>
                                  <div>
                                      <p>{prod.product.title}</p>
-                                     <small>Price: NRS {prod.product.unitPrice[0].sellingPrice}</small><br/>
+                                     <small>Price: Rs. {prod.product.unitPrice[0].sellingPrice}</small><br/>
                                      <a href="#" onClick={(e)=>deleteItem(e, prod.id)}> Remove</a>
                                  </div>
                              </div>
@@ -164,38 +171,41 @@ function Cart(){
                       </div>
                     </div>
                          </td>
-                         <td>{prod.product.unitPrice[0].sellingPrice * prod.quantity}</td>
+                         <td>Rs. {prod.product.unitPrice[0].sellingPrice * prod.quantity}</td>
                      </tr>
                      ))}
-                     
+                     </tbody>
                  </table>
                  <div className="total-price">
                      <table>
+                         <tbody>
                          <tr>
                              <td>Subtotal</td>
-                             <td>{items.subTotal}</td>
+                             <td>Rs. {items.subTotal}</td>
                          </tr>
                          <tr>
                              <td>Delivery Charge</td>
-                             <td>{items.deliveryCharge}</td>
+                             <td>Rs. {items.deliveryCharge}</td>
                          </tr>
                          <tr>
                              <td>{items.extra[0].title}</td>
-                             <td>{items.extra[0].value}</td>
+                             <td>Rs. {items.extra[0].value}</td>
                          </tr>
                          <tr>
                              <td>{items.extra[1].title}</td>
-                             <td>{items.extra[1].value}</td>
+                             <td>Rs. {items.extra[1].value}</td>
                          </tr>
                          <tr>
                              <td className="total">Total</td>
-                             <td  className="total">Nrs {items.total}</td>
+                             <td  className="total">Rs. {items.total}</td>
                          </tr>
+                         </tbody>
                      </table>
                  </div>
              </div>
         }
-        <ToastContainer/>
+        <ToastContainer
+        autoClose={1500}/>
         </div>
     );
 }

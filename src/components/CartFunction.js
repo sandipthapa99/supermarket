@@ -1,3 +1,24 @@
+export const addToCart =async (e, prodId)=>{
+  e.preventDefault();
+  var token = JSON.parse(window.localStorage.getItem('access_token'));
+
+  if(token){
+    const res = await fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/cart",{
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json',
+          'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
+          'Warehouse-Id':'1',
+          'Authorization': 'Bearer ' + token    
+      }
+    });
+    const data = await res.json();
+  }
+  else{
+    window.location='/';
+  }
+}
+/* 
 export const addToCart = (evt, prodId) => {
     evt.preventDefault();
     const accessToken = localStorage.getItem("accessToken");
@@ -112,4 +133,4 @@ export const addToCart = (evt, prodId) => {
     };
   
     updateProduct();
-  };
+  }; */

@@ -11,7 +11,6 @@ import { ProductsContext } from '../context/ProductsContext';
 
 function Carousels(){
 	const sth = useContext(ProductsContext);
-	console.log(sth);
     return(
         <div>
 			<Carousel controls={false} indicators={true} interval={3000}>
