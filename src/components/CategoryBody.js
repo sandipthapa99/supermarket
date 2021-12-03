@@ -2,6 +2,7 @@ import React, {useContext, useState, useEffect} from 'react';
 import {FaHome,FaArrowRight } from "react-icons/fa";
 import { ProductsContext } from '../context/ProductsContext';
 import ReactPaginate from 'react-paginate';
+import Pagination from './Pagination';
 
 import offer from '../assets/images/offer.png';
 
@@ -13,6 +14,9 @@ function CategoryBody() {
     // const products = useContext(ProductsContext);
 	const [items, setItems] = useState([]);
 	const [loading,setLoading] = useState(true);
+
+	const [currentPage, setCurrentPage] = useState(1);
+	const [perPage, setPerPage] = useState(6);
 
 	useEffect(()=>{
 		const getProducts = async()=>{
@@ -48,12 +52,20 @@ function CategoryBody() {
 			const data = await res.json();
 			return data;
 	};
-	const handlePageClick = async (data)=>{
-		console.log(data.selected);
-		let currentPage= data.selected+1;
-		const dataFromServer = await fetchData(currentPage);
-		setItems(dataFromServer);
-	}
+	// const handlePageClick = async (data)=>{
+	// 	console.log(data.selected);
+	// 	let currentPage= data.selected+1;
+	// 	const dataFromServer = await fetchData(currentPage);
+	// 	setItems(dataFromServer);
+	// }
+
+	const indexOfLastProd = currentPage * perPage;
+	const indexOfFirstProd =indexOfLastProd - perPage;
+	const currentProd = items.slice(indexOfFirstProd, indexOfLastProd);
+	console.log(currentProd);
+
+	// change page
+	const paginate = (pageNumber) =>  setCurrentPage(pageNumber);
 
     return (
             <div class="col-md-8 products-right">
@@ -79,7 +91,7 @@ function CategoryBody() {
 					</div>
 				</div>
 				<div class="agile_top_brands_grids">
-                    {items.map(prod=>(
+                    {currentProd.map(prod=>(
                     <div class="col-md-4 top_brand_left" key={prod.id} style={{paddingBottom:"15px"}}>
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
@@ -117,39 +129,8 @@ function CategoryBody() {
 						</div>
 					</div>
                     ))}
-				</div>	
-				<ReactPaginate
-				previousLabel={"<<"}
-				nextLabel={'>>'}
-				breakLabel={'...'}
-				pageCount={25}
-				marginPagesDisplayed={2}
-				pageRangeDisplayed={3}
-
-				containerClassName={'pagination justify-content-center'}
-				pageClassName={'page-item'}
-				pageLinkClassName={'page-link'}
-				activeClassName={'active'}
-				/>
-				<nav class="numbering">
-					<ul class="pagination paging">
-						<li>
-							<a href="#" aria-label="Previous">
-								<span aria-hidden="true">&laquo;</span>
-							</a>
-						</li>
-						<li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li>
-							<a href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+				</div>
+				<Pagination perPage={perPage} totalProd={items.length} paginate={paginate}/>	
 			</div>
     )
 }
