@@ -66,6 +66,26 @@ function Cart(){
                      ))}
                      
                  </table>
+                 <div className="total-price">
+                     <table>
+                         <tr>
+                             <td>Subtotal</td>
+                             <td>{items.subTotal}</td>
+                         </tr>
+                         <tr>
+                             <td>{items.extra[0].title}</td>
+                             <td>{items.extra[0].value}</td>
+                         </tr>
+                         <tr>
+                             <td>{items.extra[1].title}</td>
+                             <td>{items.extra[1].value}</td>
+                         </tr>
+                         <tr>
+                             <td>Total</td>
+                             <td>Nrs {items.total}</td>
+                         </tr>
+                     </table>
+                 </div>
              </div>
             // <div>
             //     {items.cartProducts.map(prod=>(
