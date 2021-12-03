@@ -1,13 +1,8 @@
 import React from "react";
-import '../components/css/cart.css'
+import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
-import { CartState } from "../context/Context";
-import { ListGroup,Button,Row,Col, Form, Image } from "react-bootstrap";
-import { AiFillDelete } from "react-icons/ai";
-import img from '../assets/images/1.png';
-import {CartContext} from '../context/CartContext';
-import { Link } from "react-router-dom";
-import Header from "../components/Header";
+import '../components/css/cart.css'
+
 
 function Cart(){
 
@@ -42,13 +37,16 @@ function Cart(){
 
     return(
         <div className="container">
+            <Helmet>
+                <title>Supermarket | Cart</title>
+			</Helmet>
             {loading?
             <div>Loading</div>:
              <div className="small-container cart-page">
-                 <table>
+                 <table className="mytable">
                      <tr>
                          <th>Product</th>
-                         <th>Qunatity</th>
+                         <th>Quantity</th>
                          <th>SubTotal</th>
                      </tr>
                      {items.cartProducts.map(prod=>(
