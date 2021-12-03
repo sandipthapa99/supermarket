@@ -76,6 +76,10 @@ function Cart(){
                              <td>{items.subTotal}</td>
                          </tr>
                          <tr>
+                             <td>Delivery Charge</td>
+                             <td>{items.deliveryCharge}</td>
+                         </tr>
+                         <tr>
                              <td>{items.extra[0].title}</td>
                              <td>{items.extra[0].value}</td>
                          </tr>
@@ -84,8 +88,8 @@ function Cart(){
                              <td>{items.extra[1].value}</td>
                          </tr>
                          <tr>
-                             <td>Total</td>
-                             <td>Nrs {items.total}</td>
+                             <td className="total">Total</td>
+                             <td  className="total">Nrs {items.total}</td>
                          </tr>
                      </table>
                  </div>

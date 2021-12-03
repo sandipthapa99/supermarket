@@ -2,6 +2,7 @@ import React, {useContext, useState} from 'react';
 import { Link } from "react-router-dom";
 import { FaCartArrowDown, FaSearch, FaPhoneAlt } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import Cart from "../pages/Cart.js";
 import {
   Badge,
   Container,
