@@ -13,7 +13,7 @@ function PizzaPage(){
     const pizza =[];
 	console.log(data);
     data.map(a=>{
-        if(a.categoryTitle === "PIZZA"){
+        if((a.categoryTitle === "PIZZA") || (a.categoryTitle === "PIzza sub1")){
             pizza.push(a);
         }
         

@@ -22,7 +22,7 @@ function CategoryBody() {
                     'Content-Type': 'application/json',
                     'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
                     'Warehouse-Id':'1',
-                    'perPage':5,
+                    // 'perPage':5,
 
                 }
             });
@@ -80,7 +80,7 @@ function CategoryBody() {
 				</div>
 				<div class="agile_top_brands_grids">
                     {items.map(prod=>(
-                    <div class="col-md-4 top_brand_left" key={prod.id}>
+                    <div class="col-md-4 top_brand_left" key={prod.id} style={{paddingBottom:"15px"}}>
 						<div class="hover14 column">
 							<div class="agile_top_brand_left_grid">
 								<div class="agile_top_brand_left_grid_pos">
@@ -90,8 +90,7 @@ function CategoryBody() {
 									<figure>
 										<div class="snipcart-item block">
 											<div class="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src={prod.images[0].imageName}/></a>	
-												<p>{prod.id}</p>	
+												<a href="single.html"><img title=" " alt=" " src={prod.images[0].imageName}/></a>		
 												<p>{prod.title}</p>
 												<h4>Rs. {prod.unitPrice[0].sellingPrice} <span>Rs. 55.00</span></h4>
 											</div>
@@ -126,7 +125,7 @@ function CategoryBody() {
 				pageCount={25}
 				marginPagesDisplayed={2}
 				pageRangeDisplayed={3}
-				onPageChange={handlePageClick}
+
 				containerClassName={'pagination justify-content-center'}
 				pageClassName={'page-item'}
 				pageLinkClassName={'page-link'}

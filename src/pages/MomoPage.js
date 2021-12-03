@@ -62,7 +62,7 @@ function MomoPage(){
 				</div>
 				<div className="agile_top_brands_grids">
                     {momo.map(prod=>(
-                    <div className="col-md-4 top_brand_left" key={prod.id}>
+                    <div className="col-md-4 top_brand_left" key={prod.id} style={{paddingBottom:"15px"}}>
 						<div className="hover14 column">
 							<div className="agile_top_brand_left_grid">
 								<div className="agile_top_brand_left_grid_pos">
