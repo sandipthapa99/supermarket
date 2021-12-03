@@ -17,6 +17,7 @@ import './css/header.css'
 
 function Header() {
   const cartData = useContext(CartContext);
+  console.log("cart:",cartData);
   function logOut(){
     localStorage.clear();
     window.location="/";
@@ -89,13 +90,18 @@ function Header() {
                           </span>
                         ))}
                         <Link to="/cart">
-                          <Button style={{width:"95%", margin:"0 10px 15px 10px"}}>Go To Cart</Button>
+                          <Button style={{width:"95%", margin:"0 10px 15px 10px"}}>Go To Cart Page</Button>
                         </Link>
                       </>
                     ):(
-                      <span id="emptyCart">
-                        There are no items in the Cart!
-                      </span>
+                      <div>
+                        {/* <span id="emptyCart">
+                          There are no items in the Cart!
+                        </span> */}
+                        <Link to="/cart">
+                            <Button style={{width:"95%", margin:"0 10px 15px 10px"}}>Go To Cart Page</Button>
+                          </Link>
+                          </div>
                     )}
                       
                     </Dropdown.Menu>

@@ -5,6 +5,9 @@ import { CartState } from "../context/Context";
 import { ListGroup,Button,Row,Col, Form, Image } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import img from '../assets/images/1.png';
+import {CartContext} from '../context/CartContext';
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 function Cart(){
 
@@ -87,17 +90,6 @@ function Cart(){
                      </table>
                  </div>
              </div>
-            // <div>
-            //     {items.cartProducts.map(prod=>(
-            //         <div key={prod.id}>
-            //             <div>{prod.id}</div>
-            //             <div>{prod.product.title}</div>
-            //             <div>Nrs. {prod.product.unitPrice[0].sellingPrice}</div>
-            //             <div>QTY: {prod.quantity}</div>
-            //             <img src={prod.product.images[0].imageName}/>
-            //         </div>
-            //     ))}
-            // </div>
         }
         </div>
     );
