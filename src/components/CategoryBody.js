@@ -5,7 +5,7 @@ import ReactPaginate from 'react-paginate';
 import Pagination from './Pagination';
 
 import offer from '../assets/images/offer.png';
-
+import {addToCart} from "../components/CartFunction";
 
 import {} from './DataFetching';
 
@@ -62,7 +62,7 @@ function CategoryBody() {
 	const indexOfLastProd = currentPage * perPage;
 	const indexOfFirstProd =indexOfLastProd - perPage;
 	const currentProd = items.slice(indexOfFirstProd, indexOfLastProd);
-	console.log(currentProd);
+	// console.log(currentProd);
 
 	// change page
 	const paginate = (pageNumber) =>  setCurrentPage(pageNumber);
@@ -118,7 +118,7 @@ function CategoryBody() {
 														<input type="hidden" name="currency_code" value="USD"/>
 														<input type="hidden" name="return" value=" "/>
 														<input type="hidden" name="cancel_return" value=" "/>
-														<input type="submit" name="submit" value="Add to cart" className="button"/>
+														<input type="submit" name="submit" value="Add to cart" className="button" onClick={()=>addToCart()}/>
 													</fieldset>
 												</form>
 											</div>

@@ -18,7 +18,6 @@ import './css/header.css'
 
 function Header() {
   const cartData = useContext(CartContext);
-  console.log("cart:",cartData);
   function logOut(){
     localStorage.clear();
     window.location="/";

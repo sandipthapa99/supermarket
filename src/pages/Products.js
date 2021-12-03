@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet";
 import Categories from "../components/Categories";
 import DataFetching from "../components/DataFetching";
 
-
 function Products(){
     return(
         <div>

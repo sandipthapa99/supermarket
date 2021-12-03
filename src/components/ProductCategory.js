@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 
 function ProductCategory() {
     const [category, setCategory]= useState([]);
-    console.log(category);
+    // console.log(category);
 
     useEffect(()=>{
         fetch("https://uat.ordering-boafresh.ekbana.net/api/v4/category", {
