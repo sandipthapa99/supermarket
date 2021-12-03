@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useState} from 'react';
 import { Link } from "react-router-dom";
 import { FaCartArrowDown, FaSearch, FaPhoneAlt } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
@@ -12,9 +12,11 @@ import {
   Button
 } from "react-bootstrap";
 import { CartState } from "../context/Context";
+import { CartContext } from "../context/CartContext";
 import './css/header.css'
 
 function Header() {
+  const cartData = useContext(CartContext);
   function logOut(){
     localStorage.clear();
     window.location="/";
