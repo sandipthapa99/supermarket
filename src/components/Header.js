@@ -124,7 +124,7 @@ function Header() {
           </div>
           <div className="w3ls_logo_products_left">
             <h1>
-              <Link to="/">super Market</Link>
+              <Link to="/">Khaja Ghar</Link>
             </h1>
           </div>
           <div className="w3l_search">

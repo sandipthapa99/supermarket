@@ -10,16 +10,10 @@ import Signup from './pages/Signup';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Offers from './pages/OffersPage';
-import Gourmet from './pages/Gourmet';
-import PackagedFoods from './pages/PackagedFoods';
-import Groceries from './pages/Groceries';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/bootstrap.css';
 import './assets/css/style.css';
 import './assets/css/skdslider.css'
-import HouseHold from './pages/Household';
-import PersonalCare from './pages/PersonalCare';
-import Beverages from './pages/Beverages';
 import Cart from './pages/Cart';
 import About from './pages/About';
 import SingleProduct from './components/SingleProduct';

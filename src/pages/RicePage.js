@@ -57,7 +57,7 @@ function RicePage(){
 											<div className="snipcart-thumb">
 											<Link to={`/product/${prod.id}`}><img title=" " alt=" " src={prod.images[0].imageName}/></Link>		
 												<p>{prod.title}</p>
-												<h4>Rs. {prod.unitPrice[0].sellingPrice} <span>Rs. 55.00</span></h4>
+												<h4>Rs. {prod.unitPrice[0].sellingPrice} </h4>
 											</div>
 											<div className="snipcart-details top_brand_home_details">
 												<form onSubmit={(e)=>addToCart(e,prod.id)}>
