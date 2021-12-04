@@ -8,6 +8,7 @@ import offer from '../assets/images/offer.png';
 import {addToCart} from "../components/CartFunction";
 
 import {} from './DataFetching';
+import { Link } from 'react-router-dom';
 
 function CategoryBody() {
     
@@ -102,7 +103,7 @@ function CategoryBody() {
 									<figure>
 										<div className="snipcart-item block">
 											<div className="snipcart-thumb">
-												<a href="single.html"><img title=" " alt=" " src={prod.images[0].imageName}/></a>		
+												<Link to={`${prod.id}`}><img title=" " alt=" " src={prod.images[0].imageName}/></Link>		
 												<p>{prod.title}</p>
 												<h4>Rs. {prod.unitPrice[0].sellingPrice} <span>Rs. 55.00</span></h4>
 											</div>

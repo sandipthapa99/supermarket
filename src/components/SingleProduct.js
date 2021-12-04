@@ -6,9 +6,10 @@ import {FaStar, FaHome} from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import Loader from './Loader';
 
-const SingleProduct = (props) => {
+const SingleProduct = () => {
 	const params = useParams();
 	const productId = params.productId;
+	console.log(productId);
 
 	const [prodDetails, setProdDetails] = useState([]);
 	const [loading,setLoading] = useState(true);

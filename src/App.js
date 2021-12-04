@@ -75,14 +75,20 @@ function App() {
       <Route path='/gourmet' element={<Gourmet/>}/>
       <Route path='/packagedfoods' element={<PackagedFoods/>}/>
       <Route path='/groceries' element={<Groceries/>}/>
-      <Route path='/products' element={<Products/>}/>
+      <Route path='/product' element={<Products/>}/>
       <Route path='/household' element={<HouseHold/>}/>
       <Route path='/personalcare' element={<PersonalCare/>}/>
       <Route path='/beverages' element={<Beverages/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/product/:productId' element={<SingleProduct/>}/>
-      <Route path='/products' element={<Products/>}/>
+      <Route path='/momo/:productId' element={<SingleProduct/>}/>
+      <Route path='/noodles/:productId' element={<SingleProduct/>}/>
+      <Route path='/chilli/:productId' element={<SingleProduct/>}/>
+      <Route path='/sandwich/:productId' element={<SingleProduct/>}/>
+      <Route path='/healthy%20choice/:productId' element={<SingleProduct/>}/>
+      <Route path='/rice/:productId' element={<SingleProduct/>}/>
+      <Route path='/pizza/:productId' element={<SingleProduct/>}/>
       <Route path='/momo' element={<MomoPage/>}/>
       <Route path='/noodles' element={<NoodlesPage/>}/>
       <Route path='/chilli' element={<ChilliPage/>}/>

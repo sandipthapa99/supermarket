@@ -32,7 +32,7 @@ function Header() {
           <div className="w3l_offers">
             <p>
               SALE UP TO 70% OFF. USE CODE "SALE70%" .{" "}
-              <Link to="/products">SHOP NOW</Link>
+              <Link to="/product">SHOP NOW</Link>
             </p>
           </div>
           {localStorage.getItem('access_token')?

@@ -3,8 +3,7 @@ import {useState} from 'react';
 
 import img1 from '../assets/images/offer.png';
 import './css/offers.css';
-import {FaStar} from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
+
 import {CartState} from "../context/Context";
 import { Link } from 'react-router-dom';
 import { ProductsContext } from '../context/ProductsContext';

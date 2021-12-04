@@ -21,7 +21,7 @@ function Footer(){
 					<ul className="info"> 
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/about">About Us</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/contact">Contact Us</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/products">Special Products</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/product">Special Products</Link></li>
 					</ul>
 				</div>
 				<div className="col-md-3 w3_footer_grid">
@@ -37,7 +37,7 @@ function Footer(){
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Profile</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/products">Store</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/product">Store</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/cart">My Cart</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/login">Login</Link></li>
 						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/signup">Create Account</Link></li>

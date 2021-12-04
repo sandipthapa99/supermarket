@@ -10,7 +10,7 @@ function Categories() {
             <div className="categories">
 					<h2>Categories</h2>
 					<ul className="cate">
-						<li><Link to="/products"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All Products</Link></li>
+						<li><Link to="/product"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All Products</Link></li>
 						<li><Link to="/pizza"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Pizza</Link></li>
 							<ul>
 								<li><a href="pizza"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Pizza 1</a></li>
