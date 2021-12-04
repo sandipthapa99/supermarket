@@ -12,6 +12,8 @@ import {addToCart} from '../components/AddCart';
 
 
 function Search() {
+    var token = JSON.parse(window.localStorage.getItem('access_token'));
+
     const params = useParams();
     const searchKey = params.searchKey;
 
@@ -75,7 +77,8 @@ function Search() {
                                     <Card.Body>
                                         <h2>{prod.title}</h2>
                                         <p>Rs {prod.unitPrice[0].sellingPrice}</p>
-                                        <form onSubmit={(e)=>addToCart(e,prod.id)}>
+                                        <form 
+                                        onSubmit={(e)=>addToCart(e,prod.id)}>
                                             <fieldset>
                                                 <input type="submit" name="submit" value="Add to cart" className="button" />
                                             </fieldset>

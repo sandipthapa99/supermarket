@@ -11,6 +11,7 @@ import { Dropdown, Form } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {addToCart} from '../components/AddCart';
+import SorterDropdown from '../components/SorterDropdown';
 // import { Sorter } from '../components/Sorter';
 
 function MomoPage(){
@@ -93,18 +94,7 @@ function MomoPage(){
                     <Categories/>																																												
                 </div>
                 <div className="col-md-8 products-right">
-				<div className="products-right-grid">
-					<div className="products-right-grids">
-					<Form.Select style={{width:"120px", float:"right"}} defaultValue="nameAsc" onChange={(e)=>{setSortBy(e.target.value)}}>
-					<option disabled>Sort By</option>
-					<option value="nameAsc">Name Ascending</option>
-					<option value="nameDesc">Name Descending</option>
-					<option value="priceAsc">Price (Low to High)</option>
-					<option value="priceDesc">Price (High to Low)</option>
-					</Form.Select>
-						<div className="clearfix"> </div>
-					</div>
-				</div>
+				<SorterDropdown/>
 				<div className="agile_top_brands_grids">
                     {momo.map(prod=>(
                     <div className="col-md-4 top_brand_left" key={prod.id} style={{paddingBottom:"15px"}}>

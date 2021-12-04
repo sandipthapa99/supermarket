@@ -66,20 +66,10 @@ function Header() {
                   <Dropdown>
                     <Dropdown.Toggle variant="success">
                       <FaCartArrowDown fontSize="20px" />
-                      <Badge
-                        pill
-                        bg="danger"
-                        text="light"
-                        style={{ fontSize: "10px", top: -9, left: -5 }}
-                      >
-                        {cart.length}
-                      </Badge>
                     </Dropdown.Toggle>
                     <Dropdown.Menu
                       style={{ minWidth: 370, left: "-280px", zIndex:9999 }}
                     >
-                    {cart.length>0?(
-                      <>
                         {cart.map(prod=>(
                           <span className="cartitem" key={prod.id}>
                             <img src={prod.image} className="cartItemImg" alt={prod.name}/>
@@ -87,30 +77,13 @@ function Header() {
                               <span id="itemText">{prod.name}</span>
                               <span id="itemText">${prod.price}</span>
                             </div>
-                            <AiFillDelete
-                            fontSize="20px" 
-                            style={{cursor:"pointer",color:"#dc3545"}}
-                            onClick={()=>dispatch({
-                              type:"REMOVE_FROM_CART",
-                              payload:prod,
-                            })}
-                             ></AiFillDelete>
+
                           </span>
                         ))}
                         <Link to="/cart">
-                          <Button style={{width:"95%", margin:"0 10px 15px 10px"}}>Go To Cart Page</Button>
+                          <Button style={{width:"95%", margin:"5px 10px 5px 10px"}}>Go To Cart Page</Button>
                         </Link>
-                      </>
-                    ):(
-                      <div>
-                        {/* <span id="emptyCart">
-                          There are no items in the Cart!
-                        </span> */}
-                        <Link to="/cart">
-                            <Button style={{width:"95%", margin:"0 10px 15px 10px"}}>Go To Cart Page</Button>
-                          </Link>
-                          </div>
-                    )}
+                      
                       
                     </Dropdown.Menu>
                   </Dropdown>

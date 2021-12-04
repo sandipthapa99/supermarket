@@ -33,7 +33,7 @@ export const addToCart = (e, prodId) => {
           addCart();
   }
   else{
-    window.location='/';
+    window.location='/login';
   }
   
 }

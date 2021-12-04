@@ -11,14 +11,17 @@ import {addToCart} from "./AddCart";
 
 import {} from './DataFetching';
 import { Link } from 'react-router-dom';
+import SorterDropdown from './SorterDropdown';
 
 function CategoryBody() {
     
 	const [items, setItems] = useState([]);
+	const [sortedItems, setSortedItems] = useState([]);
 	const [loading,setLoading] = useState(true);
 
 	const [currentPage, setCurrentPage] = useState(1);
 	const [perPage, setPerPage] = useState(6);
+	// console.log(items);
 
 	useEffect(()=>{
 		const getProducts = async()=>{
@@ -54,39 +57,41 @@ function CategoryBody() {
 			const data = await res.json();
 			return data;
 	};
-	// const handlePageClick = async (data)=>{
-	// 	console.log(data.selected);
-	// 	let currentPage= data.selected+1;
-	// 	const dataFromServer = await fetchData(currentPage);
-	// 	setItems(dataFromServer);
-	// }
 
 	const indexOfLastProd = currentPage * perPage;
 	const indexOfFirstProd =indexOfLastProd - perPage;
 	const currentProd = items.slice(indexOfFirstProd, indexOfLastProd);
-	// console.log(currentProd);
+	console.log(currentProd);
 
 	// change page
 	const paginate = (pageNumber) =>  setCurrentPage(pageNumber);
 
+	function sortAZ(){
+		currentProd.sort(function(a,b){
+			if(a.title.toLowerCase() < b.title.toLowerCase())return -1;
+			if(a.title.toLowerCase() > b.title.toLowerCase())return 1;
+			return 0;
+		});
+	}
+	function sortZA(){
+		currentProd.sort(function(a,b){
+			if(a.title.toLowerCase() > b.title.toLowerCase())return -1;
+			if(a.title.toLowerCase() < b.title.toLowerCase())return 1;
+			return 0;
+		});
+	}
+
     return (
             <div className="col-md-8 products-right">
+				{/* <SorterDropdown/> */}
 				<div className="products-right-grid">
 					<div className="products-right-grids">
-						<div className="sorting">
-							<select id="country" className="frm-field required sect">
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Default sorting</option>
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by popularity</option> 
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by average rating</option>					
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by price</option>								
-							</select>
-						</div>
 						<div className="sorting-left">
 							<select id="country1" className="frm-field required sect">
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 9</option>
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 18</option> 
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 32</option>					
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All</option>								
+								<option>A - Z</option>
+								<option>Z - A</option> 
+								<option value="null">Price Increasing</option>					
+								<option value="null">Price Decreasing</option>								
 							</select>
 						</div>
 						<div className="clearfix"> </div>

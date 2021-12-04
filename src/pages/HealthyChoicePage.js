@@ -11,6 +11,7 @@ import Pagination from '../components/Pagination';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {addToCart} from '../components/AddCart';
+import SorterDropdown from '../components/SorterDropdown';
 
 function HealthyChoicePage(){
 
@@ -54,27 +55,7 @@ function HealthyChoicePage(){
                     <Categories/>																																												
                 </div>
                 <div className="col-md-8 products-right">
-				<div className="products-right-grid">
-					<div className="products-right-grids">
-						<div className="sorting">
-							<select id="country" className="frm-field required sect">
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Default sorting</option>
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by popularity</option> 
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by average rating</option>					
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by price</option>								
-							</select>
-						</div>
-						<div className="sorting-left">
-							<select id="country1" className="frm-field required sect">
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 9</option>
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 18</option> 
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 32</option>					
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All</option>								
-							</select>
-						</div>
-						<div className="clearfix"> </div>
-					</div>
-				</div>
+				<SorterDropdown/>
 				<div className="agile_top_brands_grids">
                     {currentProd.map(prod=>(
                     <div className="col-md-4 top_brand_left" key={prod.id} style={{paddingBottom:"15px"}}>
