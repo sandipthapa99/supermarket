@@ -6,7 +6,7 @@ const Pagination = ({perPage, totalProd, paginate}) => {
         pageNumbers.push(i);
     }
     return (
-        <div>
+        <div style={{float:"right"}}>
         <nav>
             <ul className="pagination justify-content-center" style={{float:"left"}}>
                 {pageNumbers.map(number=>(

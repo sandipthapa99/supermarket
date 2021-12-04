@@ -32,6 +32,7 @@ import RicePage from './pages/RicePage';
 import PizzaPage from './pages/PizzaPage';
 import ScroolTop from './components/ScroolTop';
 import Profile from './pages/Profile';
+import HealthyChoicePage from './pages/HealthyChoicePage';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -72,13 +73,7 @@ function App() {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/offers' element={<Offers/>}/>
-      <Route path='/gourmet' element={<Gourmet/>}/>
-      <Route path='/packagedfoods' element={<PackagedFoods/>}/>
-      <Route path='/groceries' element={<Groceries/>}/>
       <Route path='/product' element={<Products/>}/>
-      <Route path='/household' element={<HouseHold/>}/>
-      <Route path='/personalcare' element={<PersonalCare/>}/>
-      <Route path='/beverages' element={<Beverages/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/product/:productId' element={<SingleProduct/>}/>
@@ -93,7 +88,7 @@ function App() {
       <Route path='/noodles' element={<NoodlesPage/>}/>
       <Route path='/chilli' element={<ChilliPage/>}/>
       <Route path='/sandwich' element={<SandwichPage/>}/>
-      <Route path='/healthy%20choice' element={<MomoPage/>}/>
+      <Route path='/healthy%20choice' element={<HealthyChoicePage/>}/>
       <Route path='/rice' element={<RicePage/>}/>
       <Route path='/pizza' element={<PizzaPage/>}/>
       <Route path='/profile' element={<Profile/>}/>

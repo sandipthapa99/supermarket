@@ -27,11 +27,11 @@ function Footer(){
 				<div className="col-md-3 w3_footer_grid">
 					<h3>Category</h3>
 					<ul className="info"> 
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/groceries">Groceries</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/household">Household</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/personalcare">Personal Care</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/packagedfoods">Packaged Foods</Link></li>
-						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/beverages">Beverages</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/pizza">Pizza</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/momo">Momo</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/noodles">Noodles</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/chilli">Chilli</Link></li>
+						<li><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i><Link to="/sandwich">Sandwich</Link></li>
 					</ul>
 				</div>
 				<div className="col-md-3 w3_footer_grid">

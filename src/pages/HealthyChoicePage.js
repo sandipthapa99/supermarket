@@ -7,27 +7,40 @@ import offer from '../assets/images/offer.png';
 import { ProductsContext } from '../context/ProductsContext';
 
 import Categories from "../components/Categories";
+import Pagination from '../components/Pagination';
 
-function ChilliPage(){
+function HealthyChoicePage(){
+
+	const [currentPage, setCurrentPage] = useState(1);
+	const [perPage, setPerPage] = useState(6);
+
     const data = useContext(ProductsContext);
-    const chilli =[]
+    const noodles =[]
 
     data.map(a=>{
-        if(a.categoryTitle==="CHILLI"){
-            chilli.push(a);
+        if(a.categoryTitle==="HEALTHY CHOICE"){
+            noodles.push(a);
         }
         
     });
+
+	const indexOfLastProd = currentPage * perPage;
+	const indexOfFirstProd =indexOfLastProd - perPage;
+	const currentProd = noodles.slice(indexOfFirstProd, indexOfLastProd);
+	// console.log(currentProd);
+
+	// change page
+	const paginate = (pageNumber) =>  setCurrentPage(pageNumber);
     return(
         <div>
 			<Helmet>
-                <title>Supermarket | Chilli</title>
+                <title>Supermarket | Noodles</title>
 			</Helmet>
             <div className="breadcrumbs">
             <div className="container">
                 <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
                 <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
-                    <li className="active">Products / Chilli</li>
+                    <li className="active">Products / Noodles</li>
                 </ol>
             </div>
 	    </div>
@@ -40,7 +53,14 @@ function ChilliPage(){
                 <div className="col-md-8 products-right">
 				<div className="products-right-grid">
 					<div className="products-right-grids">
-
+						<div className="sorting">
+							<select id="country" className="frm-field required sect">
+								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Default sorting</option>
+								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by popularity</option> 
+								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by average rating</option>					
+								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by price</option>								
+							</select>
+						</div>
 						<div className="sorting-left">
 							<select id="country1" className="frm-field required sect">
 								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 9</option>
@@ -53,10 +73,10 @@ function ChilliPage(){
 					</div>
 				</div>
 				<div className="agile_top_brands_grids">
-                    {chilli.map(prod=>(
-                    <div className="col-md-4 top_brand_left" key={prod.id}>
+                    {currentProd.map(prod=>(
+                    <div className="col-md-4 top_brand_left" key={prod.id} style={{paddingBottom:"15px"}}>
 						<div className="hover14 column">
-							<div className="agile_top_brand_left_grid">
+							<div className="agile_top_brand_left_grid" >
 								<div className="agile_top_brand_left_grid_pos">
 									<img src={offer} alt=" " className="img-responsive"/>
 								</div>
@@ -91,6 +111,8 @@ function ChilliPage(){
 						</div>
 					</div>
                     ))}
+					<Pagination perPage={perPage} totalProd={noodles.length} paginate={paginate}/>
+
 				</div>	
 			</div>
                 <div className="clearfix"> </div>
@@ -99,4 +121,4 @@ function ChilliPage(){
         </div>
     );
 }
-export default ChilliPage;
+export default HealthyChoicePage;
