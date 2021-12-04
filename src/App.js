@@ -78,13 +78,6 @@ function App() {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/product/:productId' element={<SingleProduct/>}/>
-      <Route path='/momo/:productId' element={<SingleProduct/>}/>
-      <Route path='/noodles/:productId' element={<SingleProduct/>}/>
-      <Route path='/chilli/:productId' element={<SingleProduct/>}/>
-      <Route path='/sandwich/:productId' element={<SingleProduct/>}/>
-      <Route path='/healthy%20choice/:productId' element={<SingleProduct/>}/>
-      <Route path='/rice/:productId' element={<SingleProduct/>}/>
-      <Route path='/pizza/:productId' element={<SingleProduct/>}/>
       <Route path='/momo' element={<MomoPage/>}/>
       <Route path='/noodles' element={<NoodlesPage/>}/>
       <Route path='/chilli' element={<ChilliPage/>}/>

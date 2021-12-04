@@ -1,0 +1,35 @@
+.slick-arrow::before{
+    background-color: #fff;
+    color: #fe9126;
+    font-size: 24px;
+}
+#searchCard{
+    background-color: #fff;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+}
+#searchCard img{
+    margin: 10px auto;
+    width: 150px;
+    border-radius: 50%;
+}
+#searchCard h2{
+    font-size: 14px;
+    padding-top: 5px;
+}
+#searchCard h3{
+    font-size: 14px;
+    color: #999 ;
+    margin: 0;
+}
+#searchCard p{
+    color: #428940;
+}
+.search-result{
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}

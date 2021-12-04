@@ -64,7 +64,7 @@ function ChilliPage(){
 									<figure>
 										<div className="snipcart-item block">
 											<div className="snipcart-thumb">
-											<Link to={`${prod.id}`}><img title=" " alt=" " src={prod.images[0].imageName}/></Link>		
+											<Link to={`/product/${prod.id}`}><img title=" " alt=" " src={prod.images[0].imageName}/></Link>		
 												<p>{prod.title}</p>
 												<h4>Rs. {prod.unitPrice[0].sellingPrice} <span>Rs. 55.00</span></h4>
 											</div>

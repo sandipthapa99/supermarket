@@ -3,6 +3,10 @@ import { Card, Col } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import offer from '../assets/images/offer.png';
 import Loader from '../components/Loader';
+import '../components/css/searchCard.css'
+import {FaHome,FaArrowRight } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+
 
 
 function Search() {
@@ -42,28 +46,46 @@ function Search() {
 	},[]);
 
     return (
-        <div className="container mb-5">
-            {loading?<Loader/>:
-            <div>
-                <div className="clearfix mt-5 mb-2">
-                    <h4>{results.length} items found</h4>
-                </div>
-                 <div>
-                    {results.map(prod=>(
-                        <Col md={3} key={prod.id}>
-                            <Card id="dishCard">
-                                <Card.Img src={prod.images[0].imageName} style={{position:"relative"}}/>
-                                <Card.Body>
-                                    <h3>{prod.title}</h3>
-                                    <h2>{prod.title}</h2>
-                                    <p>Rs {prod.unitPrice[0].sellingPrice}</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </div>
+        <div>
+            <Helmet>
+                <title>Supermarket | Noodles</title>
+			</Helmet>
+            <div className="breadcrumbs">
+            <div className="container">
+                <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+                <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
+                    <li className="active">Search</li>
+                </ol>
             </div>
-            }
+	    </div>
+            <div className="container mb-5">
+                {loading?<Loader/>:
+                <div>
+                    <div className="clearfix mt-5 mb-2">
+                        <h4 className="search-result">{results.length} items found for keyword: &apos;{searchKey}&apos;</h4>
+                    </div>
+                    <div >
+                        {results.map(prod=>(
+                            <Col md={3} key={prod.id} >
+                                <Card className="snipcart-thumb" id="searchCard">
+                                    <Link to={`/product/${prod.id}`}><Card.Img src={prod.images[0].imageName} style={{position:"relative"}}/></Link>
+                                    <Card.Body>
+                                        <h2>{prod.title}</h2>
+                                        <p>Rs {prod.unitPrice[0].sellingPrice}</p>
+                                        <form action="#" method="post">
+                                                        <fieldset>
+
+                                                            <input type="submit" name="submit" value="Add to cart" className="button"/>
+                                                        </fieldset>
+                                                    </form>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </div>
+                </div>
+                }
+            </div>
         </div>
     )
 }
