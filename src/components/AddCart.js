@@ -1,11 +1,9 @@
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const addToCart = (e, prodId) => {
   e.preventDefault();
   var token = JSON.parse(window.localStorage.getItem('access_token'));
-
-
   if(token){
     const addCart = async(e)=>{
       const mydata = await fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/cart-product", {
@@ -26,9 +24,6 @@ export const addToCart = (e, prodId) => {
             const res = await mydata.json();
             if(mydata.status===200){
               myToast("Added to cart", "success");
-                // e.target.reset();
-                // fetchUserData();
-                // updateToast();
                 
             }
             else{

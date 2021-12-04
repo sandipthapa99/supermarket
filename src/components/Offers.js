@@ -60,17 +60,6 @@ function Offers(){
 															<div className="snipcart-thumb">
 																<Link to={`product/${prod.id}`}><img src={prod.images[0].imageName} title="" alt=" "  /></Link>		
 																<p>{prod.title}</p>
-																{/* <div className="stars">
-																	<IconContext.Provider value={{color:'#3399cc'}}>
-																	<FaStar className="mybg" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																	<IconContext.Provider value={{color:'#808080'}}>
-																	<FaStar className="fa fa-star blue-star" aria-hidden="true"></FaStar>
-																	</IconContext.Provider>
-																</div> */}
 																<h4>Rs. {prod.unitPrice[0].sellingPrice} </h4>
 															</div>
 															<div className="snipcart-details top_brand_home_details">

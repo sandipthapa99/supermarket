@@ -8,8 +8,7 @@ import {FaHome,FaArrowRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import {addToCart, myToast} from '../components/CartFunction';
+import {addToCart} from '../components/AddCart';
 
 
 function Search() {
@@ -18,6 +17,7 @@ function Search() {
 
     const [results, setResults] = useState();
     const [loading, setLoading] = useState(true);
+    
     // console.log(results);
     useEffect(()=>{
 		const fetchData= async ()=>{
@@ -77,7 +77,7 @@ function Search() {
                                         <p>Rs {prod.unitPrice[0].sellingPrice}</p>
                                         <form onSubmit={(e)=>addToCart(e,prod.id)}>
                                             <fieldset>
-                                                <input type="submit" name="submit" value="Add to cart" className="button"/>
+                                                <input type="submit" name="submit" value="Add to cart" className="button" />
                                             </fieldset>
                                         </form>
                                     </Card.Body>
