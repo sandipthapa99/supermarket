@@ -50,7 +50,7 @@ function Footer(){
 		<div className="footer-copy">
 			
 			<div className="container">
-				<p>© 2021 Super Market. All rights reserved | Developed by <a href="https://www.sandipthapa.com.np" target="_blank">Milan Rai</a></p>
+				<p>© 2021 Super Market. All rights reserved | Developed by <a href="https://www.sandipthapa.com.np" target="_blank">Sandip Thapa</a></p>
 			</div>
 		</div>
 		
