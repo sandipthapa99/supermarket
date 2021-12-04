@@ -9,7 +9,7 @@ import Loader from './Loader';
 const SingleProduct = () => {
 	const params = useParams();
 	const productId = params.productId;
-	console.log(productId);
+	// console.log(productId);
 
 	const [prodDetails, setProdDetails] = useState([]);
 	const [loading,setLoading] = useState(true);

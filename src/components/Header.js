@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import { Link } from "react-router-dom";
 import { FaCartArrowDown, FaSearch, FaPhoneAlt } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
-import Cart from "../pages/Cart.js";
+import { Router } from 'react-router';
 import {
   Badge,
   Container,
@@ -16,7 +16,14 @@ import { CartState } from "../context/Context";
 import { CartContext } from "../context/CartContext";
 import './css/header.css'
 
+
 function Header() {
+  const [searchKey, setSearchKey] = useState("");
+
+  const searchProd=(e)=>{
+    e.preventDefault();
+    window.location = '/search/'+searchKey;
+  }
 
   function logOut(){
     localStorage.clear();
@@ -148,12 +155,12 @@ function Header() {
             </h1>
           </div>
           <div className="w3l_search">
-            <form action="#" method="post">
+          <form onSubmit={searchProd}>
               <input
                 type="search"
                 name="Search"
                 placeholder="Search for a Product..."
-                required=""
+                onChange={(e)=>setSearchKey(e.target.value)}
               />
               <button
                 type="submit"
@@ -165,7 +172,7 @@ function Header() {
                 </i>
               </button>
               <div className="clearfix"></div>
-            </form>
+        </form>
           </div>
 
           <div className="clearfix"> </div>
