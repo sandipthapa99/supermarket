@@ -8,6 +8,9 @@ import { ProductsContext } from '../context/ProductsContext';
 
 import Categories from "../components/Categories";
 import Pagination from '../components/Pagination';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {addToCart} from '../components/AddCart';
 
 function HealthyChoicePage(){
 
@@ -34,13 +37,13 @@ function HealthyChoicePage(){
     return(
         <div>
 			<Helmet>
-                <title>Supermarket | Noodles</title>
+                <title>Supermarket | Healthy Choice</title>
 			</Helmet>
             <div className="breadcrumbs">
             <div className="container">
                 <ol className="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
                 <li><Link to='/'><span aria-hidden="true"><FaHome className="glyphicon-home"/></span>Home</Link></li>
-                    <li className="active">Products / Noodles</li>
+                    <li className="active">Products / Healthy Choice</li>
                 </ol>
             </div>
 	    </div>
@@ -89,17 +92,8 @@ function HealthyChoicePage(){
 												<h4>Rs. {prod.unitPrice[0].sellingPrice} <span>Rs. 55.00</span></h4>
 											</div>
 											<div className="snipcart-details top_brand_home_details">
-												<form action="#" method="post">
+												<form onSubmit={(e)=>addToCart(e,prod.id)}>
 													<fieldset>
-														<input type="hidden" name="cmd" value="_cart"/>
-														<input type="hidden" name="add" value="1"/>
-														<input type="hidden" name="business" value=" "/>
-														<input type="hidden" name="item_name" value="Fortune Sunflower Oil"/>
-														<input type="hidden" name="amount" value="35.99"/>
-														<input type="hidden" name="discount_amount" value="1.00"/>
-														<input type="hidden" name="currency_code" value="USD"/>
-														<input type="hidden" name="return" value=" "/>
-														<input type="hidden" name="cancel_return" value=" "/>
 														<input type="submit" name="submit" value="Add to cart" className="button"/>
 													</fieldset>
 												</form>
@@ -118,6 +112,7 @@ function HealthyChoicePage(){
                 <div className="clearfix"> </div>
             </div>
         </div>
+		<ToastContainer/>
         </div>
     );
 }

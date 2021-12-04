@@ -24,7 +24,6 @@ export const addToCart = (e, prodId) => {
             const res = await mydata.json();
             if(mydata.status===200){
               myToast("Added to cart", "success");
-                
             }
             else{
                 console.log(res);

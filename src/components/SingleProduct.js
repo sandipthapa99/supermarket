@@ -5,6 +5,9 @@ import { Helmet } from "react-helmet";
 import {FaStar, FaHome} from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import Loader from './Loader';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {addToCart} from '../components/AddCart';
 
 const SingleProduct = () => {
 	const params = useParams();
@@ -62,17 +65,8 @@ const SingleProduct = () => {
 							<h4 class="m-sing">Rs. {prodDetails.unitPrice[0].sellingPrice}</h4>
 						</div>
 						<div class="snipcart-details agileinfo_single_right_details">
-							<form action="#" method="post">
+							<form onSubmit={(e)=>addToCart(e,productId)}>
 								<fieldset>
-									<input type="hidden" name="cmd" value="_cart"/>
-									<input type="hidden" name="add" value="1"/>
-									<input type="hidden" name="business" value=" "/>
-									<input type="hidden" name="item_name" value="pulao basmati rice"/>
-									<input type="hidden" name="amount" value="21.00"/>
-									<input type="hidden" name="discount_amount" value="1.00"/>
-									<input type="hidden" name="currency_code" value="USD"/>
-									<input type="hidden" name="return" value=" "/>
-									<input type="hidden" name="cancel_return" value=" "/>
 									<input type="submit" name="submit" value="Add to cart" class="button"/>
 								</fieldset>
 							</form>
@@ -84,6 +78,7 @@ const SingleProduct = () => {
 		</div>
 		}
 	</div>
+	<ToastContainer/>
 </div>
     )
 }
