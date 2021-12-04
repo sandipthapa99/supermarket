@@ -7,6 +7,7 @@ import '../components/css/searchCard.css'
 import {FaHome,FaArrowRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
+import {addToCart} from '../components/CartFunction';
 
 
 function Search() {
@@ -15,7 +16,7 @@ function Search() {
 
     const [results, setResults] = useState();
     const [loading, setLoading] = useState(true);
-    console.log(results);
+    // console.log(results);
     useEffect(()=>{
 		const fetchData= async ()=>{
 			const res =  await fetch("https://uat.ordering-boafresh.ekbana.net//api/v4/product/", {
@@ -48,7 +49,7 @@ function Search() {
     return (
         <div>
             <Helmet>
-                <title>Supermarket | Noodles</title>
+                <title>Supermarket | Search</title>
 			</Helmet>
             <div className="breadcrumbs">
             <div className="container">
@@ -72,9 +73,8 @@ function Search() {
                                     <Card.Body>
                                         <h2>{prod.title}</h2>
                                         <p>Rs {prod.unitPrice[0].sellingPrice}</p>
-                                        <form action="#" method="post">
+                                        <form onSubmit={(e)=>addToCart(e,prod.id)}>
                                                         <fieldset>
-
                                                             <input type="submit" name="submit" value="Add to cart" className="button"/>
                                                         </fieldset>
                                                     </form>
