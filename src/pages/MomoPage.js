@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import {FaHome,FaArrowRight } from "react-icons/fa";
 import { Helmet } from "react-helmet";
@@ -7,11 +7,19 @@ import offer from '../assets/images/offer.png';
 import { ProductsContext } from '../context/ProductsContext';
 
 import Categories from "../components/Categories";
+import { Dropdown, Form } from 'react-bootstrap';
+// import { Sorter } from '../components/Sorter';
 
 function MomoPage(){
+	const [sortBy, setSortBy] = useState("nameAsc");
+	const [sortedItems, setSortedItems] = useState([]);
+
     const data = useContext(ProductsContext);
-    const momo =[]
-    // console.log(momo)
+    const momo =[];
+	// console.log(data)
+	useEffect(() => {
+		sortItems();
+	  }, []);
 
     data.map(a=>{
         if(a.categoryTitle==="MOMO"){
@@ -19,6 +27,49 @@ function MomoPage(){
         }
         
     });
+
+	const sortItems = () => {
+		let filterArray = [...momo];
+		switch (sortBy) {
+		  case "nameAsc":
+			filterArray.sort((a, b) => {
+				console.log(a)
+			  if (a.title <= b.title) {
+				return -1;
+			  }
+			  if (a.title > b.title) {
+				return 1;
+			  }
+			  return 0;
+			});
+			break;
+		  case "nameDesc":
+			filterArray.sort((a, b) => {
+			  if (a.title <= b.title) {
+				return 1;
+			  }
+			  if (a.title > b.title) {
+				return -1;
+			  }
+			  return 0;
+			});
+			break;
+		  case "C":
+			filterArray.sort(
+			  (a, b) => a.unitPrice[0].sellingPrice - b.unitPrice[0].sellingPrice
+			);
+			break;
+		  case "D":
+			filterArray.sort(
+			  (a, b) => b.unitPrice[0].sellingPrice - a.unitPrice[0].sellingPrice
+			);
+			break;
+		  default:
+			break;
+		}
+		setSortedItems(filterArray);
+	  };
+
     return(
         <div>
 			<Helmet>
@@ -41,22 +92,13 @@ function MomoPage(){
                 <div className="col-md-8 products-right">
 				<div className="products-right-grid">
 					<div className="products-right-grids">
-						<div className="sorting">
-							<select id="country" className="frm-field required sect">
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Default sorting</option>
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by popularity</option> 
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by average rating</option>					
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Sort by price</option>								
-							</select>
-						</div>
-						<div className="sorting-left">
-							<select id="country1" className="frm-field required sect">
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 9</option>
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 18</option> 
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>Item on page 32</option>					
-								<option value="null"><i className="fa fa-arrow-right" aria-hidden="true"><FaArrowRight/></i>All</option>								
-							</select>
-						</div>
+					<Form.Select style={{width:"120px", float:"right"}} defaultValue="nameAsc" onChange={(e)=>{setSortBy(e.target.value)}}>
+					<option disabled>Sort By</option>
+					<option value="nameAsc">Name Ascending</option>
+					<option value="nameDesc">Name Descending</option>
+					<option value="priceAsc">Price (Low to High)</option>
+					<option value="priceDesc">Price (High to Low)</option>
+					</Form.Select>
 						<div className="clearfix"> </div>
 					</div>
 				</div>

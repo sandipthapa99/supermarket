@@ -1,0 +1,26 @@
+.slick-arrow::before{
+    background-color: #fff;
+    color: #fe9126;
+    font-size: 24px;
+}
+#dishCard{
+    background-color: #fff;
+    font-family: sans-serif;
+}
+#dishCard img{
+    margin: 0 auto;
+    width: 150px;
+    border-radius: 100%;
+}
+#dishCard h2{
+    font-size: 14px;
+    padding-top: 5px;
+}
+#dishCard h3{
+    font-size: 14px;
+    color: #999 ;
+    margin: 0;
+}
+#dishCard p{
+    color: #428940;
+}

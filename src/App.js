@@ -81,7 +81,7 @@ function App() {
       <Route path='/beverages' element={<Beverages/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path='/single' element={<SingleProduct/>}/>
+      <Route path='/product/:productId' element={<SingleProduct/>}/>
       <Route path='/products' element={<Products/>}/>
       <Route path='/momo' element={<MomoPage/>}/>
       <Route path='/noodles' element={<NoodlesPage/>}/>

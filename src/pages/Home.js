@@ -10,6 +10,7 @@ import {ProductsContext} from '../context/ProductsContext';
 import Loader from '../components/Loader';
 import ProductCategory from '../components/ProductCategory';
 import ScroolTop from '../components/ScroolTop';
+import NewDishes from '../components/NewDishes';
 
 
 function Home(){
@@ -54,6 +55,7 @@ function Home(){
             <ScroolTop/>
             <ProductCategory/>
             <Offers/>
+            <NewDishes/>
             <Carousels/>
             <NewOffers/>
             </div>}
