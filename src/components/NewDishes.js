@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Card, Col } from 'react-bootstrap';
 import './css/newDishes.css'
+import { Link } from 'react-router-dom';
 
 
 const NewDishes = () => {
@@ -28,7 +29,7 @@ const NewDishes = () => {
             {data.sectionDetails.products.map(prod=>(
                 <Col md={3} key={prod.id}>
                 <Card id="dishCard">
-                    <Card.Img src={prod.categoryBackgroundImage} style={{position:"relative"}}/>
+                <Link to={`/product/${prod.id}`}><Card.Img src={prod.images[0].imageName} style={{position:"relative"}}/></Link>
                     <Card.Body>
                         <h3>{prod.categoryTitle}</h3>
                         <h2>{prod.title}</h2>

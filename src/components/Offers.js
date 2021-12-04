@@ -58,7 +58,7 @@ function Offers(){
 													<figure>
 														<div className="snipcart-item block" >
 															<div className="snipcart-thumb">
-																<Link to={`product/${prod.id}`}><img src={prod.categoryBackgroundImage} title="" alt=" "  /></Link>		
+																<Link to={`product/${prod.id}`}><img src={prod.images[0].imageName} title="" alt=" "  /></Link>		
 																<p>{prod.title}</p>
 																{/* <div className="stars">
 																	<IconContext.Provider value={{color:'#3399cc'}}>
