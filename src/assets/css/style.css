@@ -929,7 +929,7 @@ a.w3_agile_vimeo:hover{
 	width: 45%;
     padding: 3em;
 	background:#F7F7F9;
-	margin:3em auto 0;
+	margin:1em auto 0;
 }
 .login-form-grids input[type="email"],.login-form-grids input[type="password"],.login-form-grids input[type="text"],.login-form-grids input[type="number"]{
 	outline: none;

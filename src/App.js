@@ -28,6 +28,7 @@ import ScroolTop from './components/ScroolTop';
 import Profile from './pages/Profile';
 import HealthyChoicePage from './pages/HealthyChoicePage';
 import Search from './pages/Search';
+import ForgotPass from './pages/ForgotPass';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -81,6 +82,7 @@ function App() {
       <Route path='/pizza' element={<PizzaPage/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path="/search/:searchKey" element={<Search/>} />
+      <Route path="forgot-password" element={<ForgotPass/>} />
     </Routes>
     </ProductsContext.Provider>
     <Footer/>

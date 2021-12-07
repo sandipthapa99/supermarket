@@ -78,7 +78,7 @@ function Login(){
 					<input type="password" placeholder="Password" required=" " onChange={(e)=>setPass(e.target.value)}/>
 					<div id="error" className="error"></div>
 					<div class="forgot">
-						<a href="#">Forgot Password?</a>
+						<Link to="/forgot-password">Forgot Password?</Link>
 					</div>
 					<input type="submit" value="Login"/>
 				</form>
