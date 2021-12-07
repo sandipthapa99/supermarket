@@ -14,13 +14,7 @@ function Navigation(){
 				<Nav>
 					<Nav.Link><Link to="/" className="navTitle">Home</Link></Nav.Link>
 					<Nav.Link><Link to="/product" className="navTitle">Products</Link></Nav.Link>
-
-					<NavDropdown id="noUnderline" title={<span className="navTitle">Pizza</span>}>
-						<NavDropdown.Item id="droplist"><span className="dropdownTitle">All Groceries</span></NavDropdown.Item>
-						<NavDropdown.Divider/>
-						<NavDropdown.Item id="droplist"><Link to="/pizza" className="dropItems">Pizza 1</Link></NavDropdown.Item>
-						<NavDropdown.Item id="droplist"><Link to="/pizza" className="dropItems">Pizza 2</Link></NavDropdown.Item>
-					</NavDropdown>
+					<Nav.Link><Link to="/pizza" className="navTitle">Pizza</Link></Nav.Link>
 
 					<Nav.Link><Link to="/momo" className="navTitle">Momo</Link></Nav.Link>
 					<Nav.Link><Link to="/noodles" className="navTitle">Noodles</Link></Nav.Link>
