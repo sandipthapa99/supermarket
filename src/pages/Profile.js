@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import '../components/css/profile.css'
 import {UserContext} from '../context/UserContext';
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaHome } from "react-icons/fa";
 import { Col, Row, Card, Form, Container } from "react-bootstrap";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Link} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 function Profile() {
@@ -117,6 +118,10 @@ function Profile() {
 
     return (
     <div className="container mt-5 mb-5">
+        <Helmet>
+            <title>Supermarket | Profile</title>
+		</Helmet>
+
         <div class="row">
             <div class="column" id="mycolumn">
                 <Card id="card">

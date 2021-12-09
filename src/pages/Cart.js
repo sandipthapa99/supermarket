@@ -5,6 +5,7 @@ import '../components/css/cart.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from "../components/Loader";
+import { Button } from "react-bootstrap";
 
 
 function Cart(){
@@ -202,6 +203,7 @@ function Cart(){
                          </tbody>
                      </table>
                  </div>
+                <Button style={{float:"right", marginTop:"15px", border:"none"}}>Proceed to Checkout</Button>
              </div>
         }
         <ToastContainer
