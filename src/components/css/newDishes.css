@@ -2,10 +2,12 @@
     background-color: #fff;
     color: #fe9126;
     font-size: 24px;
+
 }
 #dishCard{
     background-color: #fff;
     font-family: sans-serif;
+    margin: 20px;
 }
 #dishCard img{
     margin: 0 auto;
@@ -24,3 +26,9 @@
 #dishCard p{
     color: #428940;
 }
+@media (max-width:360px){
+    .container{
+        padding-right: 40px;
+        padding-left: 30px;
+    }
+  }
