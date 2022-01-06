@@ -11,11 +11,11 @@ import { Link } from 'react-router-dom';
 const NewDishes = () => {
     const products = useContext(ProductsContext);
     const data = products[2];
-    // console.log(products);
+    console.log(data);
 
     var settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -25,7 +25,6 @@ const NewDishes = () => {
                 settings: {
                   slidesToShow: 3,
                   slidesToScroll: 3,
-                  infinite: true,
                   dots: false
                 }
               },
