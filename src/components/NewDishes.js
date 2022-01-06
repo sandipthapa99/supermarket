@@ -26,7 +26,7 @@ const NewDishes = () => {
                   slidesToShow: 3,
                   slidesToScroll: 3,
                   infinite: true,
-                  dots: false
+                  dots: true
                 }
               },
               {
@@ -48,7 +48,7 @@ const NewDishes = () => {
                 breakpoint: 360,
                 settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1,
+                  slidesToScroll: 1
                 }
               },
         ]
