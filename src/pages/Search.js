@@ -1,18 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import { Card, Col } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import offer from '../assets/images/offer.png';
 import Loader from '../components/Loader';
 import '../components/css/searchCard.css'
-import {FaHome,FaArrowRight } from "react-icons/fa";
+import {FaHome} from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {addToCart} from '../components/AddCart';
 
 
 function Search() {
-    var token = JSON.parse(window.localStorage.getItem('access_token'));
+    // var token = JSON.parse(window.localStorage.getItem('access_token'));
 
     const params = useParams();
     const searchKey = params.searchKey;

@@ -1,9 +1,6 @@
-import React, {useContext, useState, useEffect} from 'react';
-import {FaHome,FaArrowRight } from "react-icons/fa";
-import { ProductsContext } from '../context/ProductsContext';
-import ReactPaginate from 'react-paginate';
+import React, {useState, useEffect} from 'react';
 import Pagination from './Pagination';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import offer from '../assets/images/offer.png';
@@ -11,12 +8,11 @@ import {addToCart} from "./AddCart";
 
 import {} from './DataFetching';
 import { Link } from 'react-router-dom';
-import SorterDropdown from './SorterDropdown';
 
 function CategoryBody() {
     
 	const [items, setItems] = useState([]);
-	const [sortedItems, setSortedItems] = useState([]);
+	// const [sortedItems, setSortedItems] = useState([]);
 	const [loading,setLoading] = useState(true);
 
 	const [currentPage, setCurrentPage] = useState(1);
@@ -43,20 +39,20 @@ function CategoryBody() {
 	},[]);
 
 
-	const fetchData =  async(currentPage)=>{
-		const res = await fetch("https://uat.ordering-boafresh.ekbana.net/api/v4/product", {
-                method: 'get',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
-                    'Warehouse-Id':'1',
-                    'perPage':6,
-                    'page': currentPage,
-                }
-            });
-			const data = await res.json();
-			return data;
-	};
+	// const fetchData =  async(currentPage)=>{
+	// 	const res = await fetch("https://uat.ordering-boafresh.ekbana.net/api/v4/product", {
+    //             method: 'get',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'Api-key': 'fa63647e6ac4500d4ffdd413c77487dbc8acf22dc062bb76e8566deb01107545',
+    //                 'Warehouse-Id':'1',
+    //                 'perPage':6,
+    //                 'page': currentPage,
+    //             }
+    //         });
+	// 		const data = await res.json();
+	// 		return data;
+	// };
 
 	const indexOfLastProd = currentPage * perPage;
 	const indexOfFirstProd =indexOfLastProd - perPage;
@@ -66,20 +62,20 @@ function CategoryBody() {
 	// change page
 	const paginate = (pageNumber) =>  setCurrentPage(pageNumber);
 
-	function sortAZ(){
-		currentProd.sort(function(a,b){
-			if(a.title.toLowerCase() < b.title.toLowerCase())return -1;
-			if(a.title.toLowerCase() > b.title.toLowerCase())return 1;
-			return 0;
-		});
-	}
-	function sortZA(){
-		currentProd.sort(function(a,b){
-			if(a.title.toLowerCase() > b.title.toLowerCase())return -1;
-			if(a.title.toLowerCase() < b.title.toLowerCase())return 1;
-			return 0;
-		});
-	}
+	// function sortAZ(){
+	// 	currentProd.sort(function(a,b){
+	// 		if(a.title.toLowerCase() < b.title.toLowerCase())return -1;
+	// 		if(a.title.toLowerCase() > b.title.toLowerCase())return 1;
+	// 		return 0;
+	// 	});
+	// }
+	// function sortZA(){
+	// 	currentProd.sort(function(a,b){
+	// 		if(a.title.toLowerCase() > b.title.toLowerCase())return -1;
+	// 		if(a.title.toLowerCase() < b.title.toLowerCase())return 1;
+	// 		return 0;
+	// 	});
+	// }
 
     return (
             <div className="col-md-8 products-right">

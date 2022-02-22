@@ -1,6 +1,4 @@
-import React, {useContext, useState} from 'react';
-import b1 from '../assets/images/b1.jpg';
-import b3 from '../assets/images/b3.jpg';
+import React, {useContext} from 'react';
 import p2 from '../assets/images/p2.jpg';
 import p3 from '../assets/images/p3.jpg';
 import p4 from '../assets/images/p4.jpg';

@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import { Card, Button } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import {FaArrowCircleRight } from "react-icons/fa";
 import "./css/category.css"
 import {Link} from 'react-router-dom';

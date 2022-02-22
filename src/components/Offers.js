@@ -17,7 +17,7 @@ function Offers(){
 	console.log(products);
 
 
-	const {state:{a1,a2,t1,t2},} = CartState();
+	// const {state:{a1,a2,t1,t2},} = CartState();
 
 	const {state:{cart},dispatch} = CartState();
 	// console.log(cart);

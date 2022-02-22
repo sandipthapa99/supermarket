@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './css/navigation.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import {Nav, Navbar} from 'react-bootstrap';
 
 function Navigation(){
         return(

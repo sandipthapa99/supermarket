@@ -17,7 +17,7 @@ function Cart(){
     const [items, setItems] = useState([]);
 	const [loading,setLoading] = useState(true);
     var token = JSON.parse(window.localStorage.getItem('access_token'));
-    // console.log(items);
+    console.log(items);
 
     useEffect(()=>{
         if(token){
@@ -57,7 +57,7 @@ function Cart(){
                     quantity:qty+1,
                 })
             });
-        const data = await res.json();
+        // const data = await res.json();
         if(res.status === 200){
             fetchCart();
             myToast("Quantity Increased", "success");

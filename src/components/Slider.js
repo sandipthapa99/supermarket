@@ -1,9 +1,5 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import './css/slider.css';
-import { Button } from 'react-bootstrap';
-import img1 from '../assets/images/11.jpg';
-import img2 from '../assets/images/22.jpg';
-import img3 from '../assets/images/44.jpg';
 
 import {Carousel} from 'react-bootstrap';
 import { ProductsContext } from '../context/ProductsContext';

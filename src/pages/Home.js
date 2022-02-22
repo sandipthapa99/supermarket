@@ -1,7 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import BrandStore from '../components/BrandStore';
-import Carousels from '../components/Carousels';
-import NewOffers from '../components/NewOffers';
 import Offers from '../components/Offers';
 import Slider from '../components/Slider';
 import { Helmet } from 'react-helmet';

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import { Link } from "react-router-dom";
-import {FaHome,FaArrowRight } from "react-icons/fa";
+import {FaHome} from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import offer from '../assets/images/offer.png';
 
@@ -8,7 +8,7 @@ import { ProductsContext } from '../context/ProductsContext';
 
 import Categories from "../components/Categories";
 import Pagination from '../components/Pagination';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {addToCart} from '../components/AddCart';
 import SorterDropdown from '../components/SorterDropdown';

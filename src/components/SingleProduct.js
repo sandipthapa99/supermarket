@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import { Helmet } from "react-helmet";
-import {FaStar, FaHome} from 'react-icons/fa';
+import {FaHome} from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 import Loader from './Loader';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {addToCart} from '../components/AddCart';
 

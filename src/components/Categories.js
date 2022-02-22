@@ -1,8 +1,6 @@
 import React from 'react'
-import {FaHome,FaArrowRight } from "react-icons/fa";
+import {FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-
 
 function Categories() {
     return (
