@@ -1,12 +1,14 @@
 import React, {useContext} from 'react'
 import {useState} from 'react';
-
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import img1 from '../assets/images/offer.png';
 import './css/offers.css';
 
 import {CartState} from "../context/Context";
 import { Link } from 'react-router-dom';
 import { ProductsContext } from '../context/ProductsContext';
+import {addToCart} from './AddCart';
 
 
 
@@ -74,24 +76,10 @@ function Offers(){
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
 																		<input type="hidden" name="cancel_return" value=" " />
-																		{cart.some(p=>p.id===prod.id)?(
-																			<input type="button" 
-																			onClick={()=>{dispatch({
-																				type:'REMOVE_FROM_CART',
-																				payload:prod,
-																			});
-																			}}  name="submit" value="Remove from Cart" className="buttonRemove"/>
-																		):(
-																			<input type="button" 
-																			onClick={()=>{dispatch({
-																				type:'ADD_TO_CART',
-																				payload:prod,
-																			});
-																			}} 
-																			name="submit" value="Add to cart" className="button"/>
-																		)}
 																		
-																		
+																		<input type="button" 
+																		onClick={(e)=>addToCart(e,prod.id)}
+																		name="submit" value="Add to cart" className="button"/>
 																	</fieldset>
 																</form>
 															</div>
@@ -149,22 +137,9 @@ function Offers(){
 																		<input type="hidden" name="discount_amount" value="1.00" />
 																		<input type="hidden" name="currency_code" value="USD" />
 																		<input type="hidden" name="return" value=" " />
-																		{cart.some(p=>p.id===items.id)?(
-																			<input type="button" 
-																			onClick={()=>{dispatch({
-																				type:'REMOVE_FROM_CART',
-																				payload:items,
-																			});
-																			}}  name="submit" value="Remove from Cart" className="buttonRemove"/>
-																		):(
-																			<input type="button" 
-																			onClick={()=>{dispatch({
-																				type:'ADD_TO_CART',
-																				payload:items,
-																			});
-																			}} 
-																			name="submit" value="Add to cart" className="button"/>
-																		)}
+																		<input type="button" 
+																		onClick={(e)=>addToCart(e,items.id)}
+																		name="submit" value="Add to cart" className="button"/>
 																	</fieldset>
 																</form>
 															</div>
@@ -182,6 +157,7 @@ function Offers(){
 					</div>
 				</div>
 			</div>
+			<ToastContainer/>
 		</div>
     );
 }

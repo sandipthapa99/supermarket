@@ -31,6 +31,8 @@ import Search from './pages/Search';
 import ForgotPass from './pages/ForgotPass';
 
 function App() {
+
+  var token = JSON.parse(window.localStorage.getItem('access_token'));
   const [products, setProducts] = useState([]);
     const [loading,setLoading] = useState(true);
 

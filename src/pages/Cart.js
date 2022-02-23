@@ -17,7 +17,6 @@ function Cart(){
     const [items, setItems] = useState([]);
 	const [loading,setLoading] = useState(true);
     var token = JSON.parse(window.localStorage.getItem('access_token'));
-    console.log(items);
 
     useEffect(()=>{
         if(token){
